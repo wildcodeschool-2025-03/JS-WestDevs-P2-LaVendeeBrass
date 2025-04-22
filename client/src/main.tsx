@@ -1,8 +1,8 @@
 // Import necessary modules from React and React Router
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import router from "./router";
 import { RouterProvider } from "react-router";
+import router from "./router";
 
 // Find the root element in the HTML document
 const rootElement = document.getElementById("root");
