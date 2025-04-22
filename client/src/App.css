@@ -13,6 +13,7 @@
 
 :root {
   --primary-color: #28333a;
+  --light-text-color: #ffffff;
 }
 
 * {
