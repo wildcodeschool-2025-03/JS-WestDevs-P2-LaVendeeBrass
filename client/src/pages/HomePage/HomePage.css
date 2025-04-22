@@ -4,7 +4,7 @@ header {
 }
 
 .header-part {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,20 +15,31 @@ header {
 
   h1 {
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 36px;
     font-family: "Marcellus", sans-serif;
-    margin: 2rem;
+    margin: 1rem;
     color: var(--light-text-color);
   }
 
   img {
-    width: 200px;
+    width: 100px;
   }
 }
 
 main {
   background-color: var(--primary-color);
   color: var(--light-text-color);
+  font-family: "Marcellus", sans-serif;
+
+  p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 27px;
+    font-family: "MarcellusSC", sans-serif;
+    font-weight: normal;
+  }
 }
 
 .homepage .description {
@@ -36,9 +47,11 @@ main {
   text-align: center;
 
   h2 {
-    font-size: 27px;
     margin-top: 0;
-    font-family: "MarcellusSC", sans-serif;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -46,40 +59,167 @@ main {
   text-align: center;
 
   h2 {
-    font-family: "MarcellusSC", sans-serif;
-    font-size: 27px;
+    margin: 0 0 2rem;
   }
 
   .articles-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
   }
 
   article {
     width: 250px;
-    margin: 0 auto;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   article:nth-child(1) {
     .image-container {
-      width: 200px;
-      height: 200px;
+      width: 170px;
+      height: 170px;
       overflow: hidden;
       display: inline-block;
       clip-path: circle(50% at 50% 50%);
       -webkit-clip-path: circle(50% at 50% 50%);
     }
     img {
-      width: auto;
+      width: 255px;
       height: auto;
       min-width: 100%;
       min-height: 100%;
       transform: translate(
-        calc(50% - 43% * 2) /* Décalage horizontal */,
-        calc(50% - 58% * 2) /* Décalage vertical */
+        calc(50% - 61%) /* Décalage horizontal */,
+        calc(50% - 84%) /* Décalage vertical */
       );
       position: relative;
     }
+  }
+
+  article:nth-child(2) {
+    .image-container {
+      width: 170px;
+      height: 170px;
+      overflow: hidden;
+      display: inline-block;
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+    }
+    img {
+      width: 255px;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(
+        calc(50% - 65%) /* Décalage horizontal */,
+        calc(50% - 50%) /* Décalage vertical */
+      );
+      position: relative;
+    }
+  }
+
+  article:nth-child(3) {
+    .image-container {
+      width: 170px;
+      height: 170px;
+      overflow: hidden;
+      display: inline-block;
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+    }
+    img {
+      width: 255px;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(
+        calc(50% - 55%) /* Décalage horizontal */,
+        calc(50% - 92%) /* Décalage vertical */
+      );
+      position: relative;
+    }
+  }
+}
+
+.homepage .reservation-card {
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+
+  aside {
+    background-color: #9e8464;
+    border-radius: 16px 16px 0 0;
+    padding: 1rem;
+
+    h3 {
+      font-size: 27px;
+      margin: 0 0 0.5rem;
+      font-weight: normal;
+    }
+    h4 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 20px;
+    }
+    p {
+      margin: 0;
+    }
+
+    .horaires-midi,
+    .horaires-soir {
+      padding: 0.5rem;
+    }
+
+    .contact {
+      display: none;
+    }
+  }
+
+  article {
+    border-radius: 0 0 16px 16px;
+    background-color: #61817c;
+    padding: 1rem 5% 2rem;
+
+    h2 {
+      margin: 0 0 1.5rem;
+      font-size: 40px;
+      font-weight: normal;
+    }
+
+    p:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      font-family: "MarcellusSC", sans-serif;
+      color: var(--light-text-color);
+      font-size: 22px;
+      text-decoration: none;
+      background-color: #9e8464;
+      padding: 0.5rem 2rem;
+      border-radius: 27px;
+      margin: 1rem;
+    }
+  }
+}
+
+.homepage .localization {
+  text-align: center;
+  padding-bottom: 2rem;
+
+  .contact {
+    margin-bottom: 2rem;
+  }
+
+  iframe {
+    width: 90%;
+    height: 400px;
+  }
+
+  .adress {
+    display: none;
   }
 }

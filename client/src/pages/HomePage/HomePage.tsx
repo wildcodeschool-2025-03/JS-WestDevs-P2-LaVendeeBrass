@@ -59,9 +59,16 @@ function HomePage() {
           <aside>
             <div className="horaires">
               <h3>Horaires :</h3>
-              <p>Midi :</p>
-              <p>Mardi-Vendredi : 12h-14h30</p>
-              <p>Samedi : 12h-15h30</p>
+              <div className="horaires-midi">
+                <h4>Midi :</h4>
+                <p>Mardi-Vendredi : 12h-14h30</p>
+                <p>Samedi : 12h-15h30</p>
+              </div>
+              <div className="horaires-soir">
+                <h4>Soir :</h4>
+                <p>Mardi-Jeudi : 19h-21h</p>
+                <p>Vendredi-Samedi : 19h-22h</p>
+              </div>
             </div>
             <div className="contact">
               <h3>Contact :</h3>
@@ -92,18 +99,8 @@ function HomePage() {
           </article>
         </section>
         <section className="localization">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2736.747541874985!2d-1.941251323658372!3d46.69098347112061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480457d364d23db3%3A0xc72887f55ba598df!2s52%20Av.%20de%20la%20Plage%2C%2085800%20Saint-Gilles-Croix-de-Vie!5e0!3m2!1sfr!2sfr!4v1745316826114!5m2!1sfr!2sfr"
-            width="375"
-            height="450"
-            // style="border:0;"
-            // allowfullscreen=""
-            loading="lazy"
-            // referrerpolicy="no-referrer-when-downgrade"
-            title="google-maps"
-          />
           <div className="contact">
-            <h3>Contact :</h3>
+            <h2>Contact :</h2>
             <p>Téléphone : 02-44-56-97-83</p>
             <p>E-mail : contact@vendee-brass.fr</p>
             <p>
@@ -113,12 +110,21 @@ function HomePage() {
               85 800 Saint-Gilles-Croix-de-Vie
             </p>
           </div>
-          <p>
-            Adresse :<br />
-            52 Av. de la Plage
-            <br />
-            85 800 Saint-Gilles-Croix-de-Vie
-          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2736.747541874985!2d-1.941251323658372!3d46.69098347112061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480457d364d23db3%3A0xc72887f55ba598df!2s52%20Av.%20de%20la%20Plage%2C%2085800%20Saint-Gilles-Croix-de-Vie!5e0!3m2!1sfr!2sfr!4v1745316826114!5m2!1sfr!2sfr"
+            // width="375"
+            // height="450"
+            // style="border:0;"
+            // allowfullscreen=""
+            loading="lazy"
+            // referrerpolicy="no-referrer-when-downgrade"
+            title="google-maps"
+          />
+          <div className="adress">
+            <p>Adresse :</p>
+            <p>52 Av. de la Plage</p>
+            <p>85 800 Saint-Gilles-Croix-de-Vie</p>
+          </div>
         </section>
       </main>
     </>
