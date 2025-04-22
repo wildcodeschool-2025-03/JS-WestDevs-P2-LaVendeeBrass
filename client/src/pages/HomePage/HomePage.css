@@ -25,3 +25,61 @@ header {
     width: 200px;
   }
 }
+
+main {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+}
+
+.homepage .description {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 27px;
+    margin-top: 0;
+    font-family: "MarcellusSC", sans-serif;
+  }
+}
+
+.homepage .specialities {
+  text-align: center;
+
+  h2 {
+    font-family: "MarcellusSC", sans-serif;
+    font-size: 27px;
+  }
+
+  .articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  article {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  article:nth-child(1) {
+    .image-container {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      display: inline-block;
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+    }
+    img {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(
+        calc(50% - 43% * 2) /* Décalage horizontal */,
+        calc(50% - 58% * 2) /* Décalage vertical */
+      );
+      position: relative;
+    }
+  }
+}
