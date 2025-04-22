@@ -1,5 +1,5 @@
-function HomePage() {
-  return <></>;
-}
+import "./HomePage.css";
+
+function HomePage() {}
 
 export default HomePage;

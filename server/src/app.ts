@@ -5,9 +5,15 @@ import express from "express";
 const app = express();
 
 // Configure it
+import cors from "cors";
+
+if (process.env.CLIENT_URL != null) {
+  app.use(cors({ origin: [process.env.CLIENT_URL] }));
+}
 
 const menu = [
   {
+    id: "e",
     category: "Entrées",
     imgSrc:
       "https://www.maisondelamouche.fr/wp-content/uploads/2024/08/1722758907_recette-de-ceviche-de-daurade-a-la-peruvienne.jpg",
@@ -63,6 +69,7 @@ const menu = [
     ],
   },
   {
+    id: "p",
     category: "Plats",
     imgSrc:
       "https://cdn.pixabay.com/photo/2021/06/21/15/03/salmon-6353898_1280.jpg",
@@ -117,6 +124,7 @@ const menu = [
     ],
   },
   {
+    id: "d",
     category: "Desserts",
     imgSrc:
       "https://images.pexels.com/photos/11701858/pexels-photo-11701858.jpeg",
@@ -154,6 +162,7 @@ const menu = [
     ],
   },
   {
+    id: "bc",
     category: "Boissons Chaudes",
     imgSrc:
       "https://media.istockphoto.com/id/1126871442/fr/photo/tasse-à-café.jpg?s=612x612&w=0&k=20&c=8BcX-H-fLsItnVz89s0S-vneadu5jmn3fkVYM9BHa8c=",
@@ -245,9 +254,10 @@ const menu = [
     ],
   },
   {
+    id: "b",
     category: "Boissons",
     imgSrc:
-      "https://cdn.pixabay.com/photo/2022/07/20/02/15/cocktail-7333245_960_720.jpg",
+      "https://images.pexels.com/photos/2531183/pexels-photo-2531183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     menu: [
       {
         id: "b1",
@@ -364,12 +374,6 @@ app.get("/menu", (req: Request, res: Response) => {
 
 // You should NOT do that: such code uses the `cors` module to allow all origins, which can pose security issues.
 // For this pedagogical template, the CORS code allows CLIENT_URL in development mode (when process.env.CLIENT_URL is defined).
-
-import cors from "cors";
-
-if (process.env.CLIENT_URL != null) {
-  app.use(cors({ origin: [process.env.CLIENT_URL] }));
-}
 
 // If you need to allow extra origins, you can add something like this:
 
