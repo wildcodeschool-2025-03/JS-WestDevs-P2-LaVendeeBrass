@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <ul>
-        <li>
+        <li className="contact">
           <h3>Contact:</h3>
           <p>Téléphone: 02-44-56-97-83</p>
           <p>E-mail: contact@vendee-brass.fr</p>
@@ -36,8 +36,12 @@ function Footer() {
         <li>
           <h3>Le Site</h3>
           <p>Site développé par WestDevs</p>
-          <a href=" ">Mentions légales </a>
-          <a href=" ">Données personnelles</a>
+          <p>
+            <a href=" ">Mentions légales</a>
+          </p>
+          <p>
+            <a href=" ">Données personnelles</a>
+          </p>
         </li>
       </ul>
     </footer>
