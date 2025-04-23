@@ -1,6 +1,10 @@
 .menu-page {
   background-color: var(--primary-color);
   padding: 30px;
+  min-height: calc(100vh - 72px);
+  background-image: url(../../assets/images/background-menu.svg);
+  background-size: cover;
+  background-position: center;
 
   h1 {
     text-align: center;
@@ -15,8 +19,6 @@
 
 @media (min-width: 768px) {
   .menu-page {
-    min-height: calc(100vh - 72px);
-
     h1 {
       font-size: 3rem;
       margin: 20px;
