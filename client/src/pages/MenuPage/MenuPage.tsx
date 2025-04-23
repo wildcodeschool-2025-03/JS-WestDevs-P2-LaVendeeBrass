@@ -18,12 +18,15 @@ function MenuPage() {
   }, []);
 
   return (
-    <main>
-      {arrayOfMenus.map((el) => {
-        return (
-          <MenuCard key={el.id} imgSrc={el.imgSrc} category={el.category} />
-        );
-      })}
+    <main className="menu-page">
+      <h1>LE MENU</h1>
+      <section className="menu-list">
+        {arrayOfMenus.map((el) => {
+          return (
+            <MenuCard key={el.id} imgSrc={el.imgSrc} category={el.category} />
+          );
+        })}
+      </section>
     </main>
   );
 }

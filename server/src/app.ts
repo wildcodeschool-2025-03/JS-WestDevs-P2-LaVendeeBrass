@@ -255,7 +255,7 @@ const menu = [
   },
   {
     id: "b",
-    category: "Boissons",
+    category: "Boissons fraiches",
     imgSrc:
       "https://images.pexels.com/photos/2531183/pexels-photo-2531183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     menu: [
