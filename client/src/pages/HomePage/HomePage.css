@@ -1,9 +1,11 @@
-header {
+.navbar {
   position: fixed;
   width: 100%;
 }
 
-.header-part {
+/* HEADER */
+
+.homepage-header {
   height: 85vh;
   display: flex;
   justify-content: center;
@@ -26,10 +28,24 @@ header {
   }
 }
 
-main {
+@media screen and (min-width: 730px) {
+  .homepage-header h1 {
+    font-size: 80px;
+  }
+
+  .homepage-header img {
+    width: 170px;
+  }
+}
+
+/* MAIN */
+
+.homepage-main {
   background-color: var(--primary-color);
   color: var(--light-text-color);
   font-family: "Marcellus", sans-serif;
+  background-image: url("Curve-Line-Background.svg");
+  background-size: cover;
 
   p {
     font-size: 14px;
@@ -42,7 +58,7 @@ main {
   }
 }
 
-.homepage .description {
+.homepage-main .description {
   padding: 3rem 2rem;
   text-align: center;
 
@@ -55,7 +71,7 @@ main {
   }
 }
 
-.homepage .specialities {
+.homepage-main .specialities {
   text-align: center;
 
   h2 {
@@ -75,9 +91,6 @@ main {
     p {
       margin-bottom: 0;
     }
-  }
-
-  article:nth-child(1) {
     .image-container {
       width: 170px;
       height: 170px;
@@ -91,60 +104,33 @@ main {
       height: auto;
       min-width: 100%;
       min-height: 100%;
-      transform: translate(
-        calc(50% - 61%) /* Décalage horizontal */,
-        calc(50% - 84%) /* Décalage vertical */
-      );
       position: relative;
     }
   }
 
-  article:nth-child(2) {
-    .image-container {
-      width: 170px;
-      height: 170px;
-      overflow: hidden;
-      display: inline-block;
-      clip-path: circle(50% at 50% 50%);
-      -webkit-clip-path: circle(50% at 50% 50%);
-    }
-    img {
-      width: 255px;
-      height: auto;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(
-        calc(50% - 65%) /* Décalage horizontal */,
-        calc(50% - 50%) /* Décalage vertical */
-      );
-      position: relative;
-    }
+  article:nth-child(1) img {
+    transform: translate(
+      calc(50% - 61%) /* Décalage horizontal */,
+      calc(50% - 84%) /* Décalage vertical */
+    );
   }
 
-  article:nth-child(3) {
-    .image-container {
-      width: 170px;
-      height: 170px;
-      overflow: hidden;
-      display: inline-block;
-      clip-path: circle(50% at 50% 50%);
-      -webkit-clip-path: circle(50% at 50% 50%);
-    }
-    img {
-      width: 255px;
-      height: auto;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(
-        calc(50% - 55%) /* Décalage horizontal */,
-        calc(50% - 92%) /* Décalage vertical */
-      );
-      position: relative;
-    }
+  article:nth-child(2) img {
+    transform: translate(
+      calc(50% - 65%) /* Décalage horizontal */,
+      calc(50% - 50%) /* Décalage vertical */
+    );
+  }
+
+  article:nth-child(3) img {
+    transform: translate(
+      calc(50% - 55%) /* Décalage horizontal */,
+      calc(50% - 92%) /* Décalage vertical */
+    );
   }
 }
 
-.homepage .reservation-card {
+.homepage-main .reservation-card {
   width: 90%;
   margin: 3rem auto;
   text-align: center;
@@ -202,11 +188,33 @@ main {
       padding: 0.5rem 2rem;
       border-radius: 27px;
       margin: 1rem;
+      box-shadow: 4px 6px 8px rgba(0, 0, 0, 25%);
+      transition: 0.6s;
+    }
+
+    .reservation-link-box {
+      display: inline-block;
+    }
+
+    .reservation-link-box:hover {
+      animation: shake 0.4s forwards;
     }
   }
 }
 
-.homepage .localization {
+@keyframes shake {
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.homepage-main .localization {
   text-align: center;
   padding-bottom: 2rem;
 
@@ -221,5 +229,110 @@ main {
 
   .adress {
     display: none;
+  }
+}
+
+main > a:hover {
+  animation: shake 0.6s forwards;
+}
+
+@media screen and (min-width: 730px) {
+  .homepage-main {
+    p {
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+
+    .description {
+      padding: 3rem 2rem 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .homepage-main .specialities {
+    h2 {
+      margin-bottom: 4rem;
+    }
+
+    .articles-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: start;
+      gap: 5%;
+
+      article {
+        .image-container {
+          width: 200px;
+          height: 200px;
+          margin-bottom: 1.5rem;
+        }
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+  .homepage-main .reservation-card {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    max-width: 900px;
+    margin-bottom: 6rem;
+
+    aside {
+      border-radius: 16px 0 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .contact {
+        display: block;
+
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    article {
+      border-radius: 0 16px 16px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .homepage-main .localization {
+    display: grid;
+    grid-template-columns: 65% 30%;
+    gap: 5%;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+
+    .contact {
+      display: none;
+    }
+
+    iframe {
+      width: 100%;
+    }
+
+    .adress {
+      display: block;
+
+      p {
+        margin: 0;
+      }
+      p:first-of-type {
+        margin-bottom: 1rem;
+      }
+    }
   }
 }

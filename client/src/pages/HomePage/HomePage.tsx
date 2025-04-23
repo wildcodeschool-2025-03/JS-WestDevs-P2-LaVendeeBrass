@@ -23,11 +23,11 @@ function HomePage() {
 
   return (
     <>
-      <section className="header-part">
+      <header className="homepage-header">
         <h1>le vendée brass</h1>
         <img src="logo.png" alt="Logo de la brasserie" />
-      </section>
-      <main className="homepage">
+      </header>
+      <main className="homepage-main">
         <section className="description">
           <h2>La Brasserie</h2>
           <p>
@@ -84,18 +84,22 @@ function HomePage() {
           </aside>
           <article>
             <h2>Réservations</h2>
-            <p>
-              Vous craignez de ne pas avoir de table libre ? Ou vous êtes
-              peut-être quelqu’un d’organisé qui aime prévoir à l’avance ?
-            </p>
-            <p>Il vous suffit de réserver directement sur le site !</p>
-            <p>
-              Vous pouvez réserver jusqu’à 3 semaines à l’avance. Pour les
-              tables de plus de 8 personnes, prenez directement contact avec
-              nous par téléphone ou par mail.
-            </p>
-            <p>À très bientôt !</p>
-            <Link to="/">Réserver</Link>
+            <div className="text-container">
+              <p>
+                Vous craignez de ne pas avoir de table libre ? Ou vous êtes
+                peut-être quelqu’un d’organisé qui aime prévoir à l’avance ?
+              </p>
+              <p>Il vous suffit de réserver directement sur le site !</p>
+              <p>
+                Vous pouvez réserver jusqu’à 3 semaines à l’avance. Pour les
+                tables de plus de 8 personnes, prenez directement contact avec
+                nous par téléphone ou par mail.
+              </p>
+              <p>À très bientôt !</p>
+            </div>
+            <div className="reservation-link-box">
+              <Link to="/">Réserver</Link>
+            </div>
           </article>
         </section>
         <section className="localization">
@@ -112,12 +116,7 @@ function HomePage() {
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2736.747541874985!2d-1.941251323658372!3d46.69098347112061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480457d364d23db3%3A0xc72887f55ba598df!2s52%20Av.%20de%20la%20Plage%2C%2085800%20Saint-Gilles-Croix-de-Vie!5e0!3m2!1sfr!2sfr!4v1745316826114!5m2!1sfr!2sfr"
-            // width="375"
-            // height="450"
-            // style="border:0;"
-            // allowfullscreen=""
             loading="lazy"
-            // referrerpolicy="no-referrer-when-downgrade"
             title="google-maps"
           />
           <div className="adress">

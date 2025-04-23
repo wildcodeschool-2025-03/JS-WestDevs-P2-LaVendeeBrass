@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 function Header() {
   return (
-    <header>
+    <header className="navbar">
       <img src="logo.png" alt="Logo de la brasserie" />
       <nav>
         <ul>
