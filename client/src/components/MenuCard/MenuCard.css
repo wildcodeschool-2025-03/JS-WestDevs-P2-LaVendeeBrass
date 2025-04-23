@@ -1,0 +1,47 @@
+.menu-card {
+  width: 208px;
+  margin: 30px auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+
+  img {
+    width: 208px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    display: block;
+  }
+
+  figcaption {
+    text-align: center;
+    background-color: var(--card-menu-color);
+    font-family: "MarcellusSC", sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.menu-card:hover {
+  transform: translateZ(8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .menu-card {
+    margin: 30px 30px;
+    width: 362px;
+
+    img {
+      width: 362px;
+      height: 458px;
+    }
+
+    figcaption {
+      font-size: 2rem;
+    }
+  }
+}
