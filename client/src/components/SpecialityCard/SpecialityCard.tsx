@@ -1,5 +1,3 @@
-import "./SpecialityCard.css";
-
 interface SpecialitiesType {
   id: string;
   imgSrc: string;
