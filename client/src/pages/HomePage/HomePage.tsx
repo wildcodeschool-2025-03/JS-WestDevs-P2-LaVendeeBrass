@@ -119,7 +119,7 @@ function HomePage() {
             loading="lazy"
             title="google-maps"
           />
-          <div className="adress">
+          <div className="address">
             <p>Adresse :</p>
             <p>52 Av. de la Plage</p>
             <p>85 800 Saint-Gilles-Croix-de-Vie</p>
