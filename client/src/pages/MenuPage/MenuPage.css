@@ -1,6 +1,6 @@
 .menu-page {
   background-color: var(--primary-color);
-  padding: 30px;
+  padding-top: 70px;
   min-height: calc(100vh - 72px);
   background-image: url(../../assets/images/background-menu.svg);
   background-size: cover;

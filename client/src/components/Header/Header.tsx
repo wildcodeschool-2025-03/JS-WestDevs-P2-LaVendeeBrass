@@ -9,10 +9,10 @@ function Header() {
     headerClass += " home";
   } else if (location.pathname === "/MenuPage") {
     headerClass += " menu";
+  } else if (location.pathname === "/ReservationPage") {
+    headerClass += " reservation";
   } else if (location.pathname === "/AboutPage") {
     headerClass += " about";
-  } else {
-    headerClass += " default";
   }
 
   return (

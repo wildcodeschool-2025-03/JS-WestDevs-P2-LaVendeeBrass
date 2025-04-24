@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgba(217, 217, 217, 0.4);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 
   img {
     width: 56px;
@@ -58,17 +61,8 @@
     }
   }
 
-  .navbar.home {
-    background-color: red;
-  }
-
-  .navbar.menu {
-    background-color: var(--primary-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  .navbar.reservation a {
+    color: var(--primary-color);
   }
 
   @keyframes hoverlinks {
