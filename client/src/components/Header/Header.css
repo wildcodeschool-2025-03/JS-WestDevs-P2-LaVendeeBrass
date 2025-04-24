@@ -3,10 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(217, 217, 217, 0.4);
+  background-color: rgba(217, 217, 217, 0.6);
   position: fixed;
   width: 100%;
   z-index: 1000;
+  backdrop-filter: blur(7px);
 
   img {
     width: 56px;
