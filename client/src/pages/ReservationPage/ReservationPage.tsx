@@ -1,5 +1,5 @@
-import Heuremidi from "./Heure-midi";
 import "./ReservationPage.css";
+import HourInput from "./HourInput";
 
 function ReservationPage() {
   return (
@@ -71,7 +71,7 @@ function ReservationPage() {
             </div>
             <div className="input-group">
               <label htmlFor="heure">Heure</label>
-              <Heuremidi />
+              <HourInput />
             </div>
             <div className="input-group">
               <label htmlFor="nb">Nombre de personnes</label>

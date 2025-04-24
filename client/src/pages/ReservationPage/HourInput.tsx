@@ -1,6 +1,4 @@
-import "./Heure.css";
-
-function Heuresoir() {
+function HourInput() {
   return (
     <select name="Heure" id="heure">
       <option value="">19h</option>
@@ -14,4 +12,4 @@ function Heuresoir() {
   );
 }
 
-export default Heuresoir;
+export default HourInput;
