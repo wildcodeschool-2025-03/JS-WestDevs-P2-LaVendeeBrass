@@ -1,0 +1,147 @@
+header {
+  position: fixed;
+}
+.reservation-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-image: url("reservation/reservation-jour.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.reservation-main * {
+  font-family: "Marcellus", serif;
+}
+
+.reservation-card {
+  width: 85%;
+  margin: calc(72px + 2rem) 0 2rem;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.reservation-main .formulaire {
+  background-color: #f3f9f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.reservation-main .formulaire h1 {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #7a6b6b;
+  padding: 16px 48px;
+  font-family: "MarcellusSC", serif;
+  color: white;
+}
+.reservation-main .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservation-main .input-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.reservation-main .formulaire label {
+  color: #7a6b6b;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.reservation-main .formulaire input,
+.reservation-main .formulaire select {
+  background-color: #c2b5b5;
+  width: 200px;
+  padding: 4px 8px;
+  border-radius: 16px;
+  border: none;
+}
+
+.reservation-main .formulaire button {
+  width: 150px;
+  background-color: #c8a476;
+  font-family: "MarcellusSC", serif;
+  color: white;
+  border-radius: 16px;
+  border: transparent;
+  margin: 16px;
+  padding: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  .contact {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .reservation-main {
+    min-height: calc(100vh - 134.34px);
+  }
+  .reservation-main .reservation-card {
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 31% 69%;
+    max-width: 1035px;
+    max-height: 600px;
+  }
+
+  .reservation-main .contact {
+    background-color: #7a6b6b;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 12px;
+
+    color: white;
+  }
+
+  .reservation-main .contact .reservation-main .contact h3 {
+    font-family: "MarcellusSC", serif;
+  }
+
+  .reservation-main .contact div {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .reservation-main .contact p {
+    margin: 0;
+  }
+
+  .reservation-main .contact span {
+    display: inline-block;
+  }
+
+  .reservation-main .formulaire {
+    justify-content: space-evenly;
+  }
+
+  .reservation-main .formulaire h1 {
+    width: unset;
+    margin: 0;
+  }
+
+  .reservation-main .formulaire .inputs {
+    width: 100%;
+    max-width: 660px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: auto;
+    gap: 1rem 10%;
+  }
+}
