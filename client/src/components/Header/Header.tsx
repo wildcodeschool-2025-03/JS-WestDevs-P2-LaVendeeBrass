@@ -1,9 +1,22 @@
 import "./Header.css";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 function Header() {
+  const location = useLocation();
+
+  let headerClass = "navbar";
+  if (location.pathname === "/") {
+    headerClass += " home";
+  } else if (location.pathname === "/MenuPage") {
+    headerClass += " menu";
+  } else if (location.pathname === "/ReservationPage") {
+    headerClass += " reservation";
+  } else if (location.pathname === "/AboutPage") {
+    headerClass += " about";
+  }
+
   return (
-    <header>
+    <section className={headerClass}>
       <img src="logo.png" alt="Logo de la brasserie" />
       <nav>
         <ul>
@@ -14,10 +27,10 @@ function Header() {
             <Link to="/MenuPage">menu</Link>
           </li>
           <li>
-            <Link to="/">à propos</Link>
+            <Link to="/AboutPage">à propos</Link>
           </li>
           <li>
-            <Link to="/">réservation</Link>
+            <Link to="/ReservationPage">réservation</Link>
           </li>
         </ul>
         <div className="burger-menu">
@@ -26,7 +39,7 @@ function Header() {
           <span />
         </div>
       </nav>
-    </header>
+    </section>
   );
 }
 
