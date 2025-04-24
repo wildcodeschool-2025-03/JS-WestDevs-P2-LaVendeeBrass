@@ -17,7 +17,7 @@ function Header() {
             <Link to="/">à propos</Link>
           </li>
           <li>
-            <Link to="/">réservation</Link>
+            <Link to="/ReservationPage">réservation</Link>
           </li>
         </ul>
         <div className="burger-menu">
