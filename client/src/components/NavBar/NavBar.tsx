@@ -1,22 +1,31 @@
-import "./Header.css";
+import { useState } from "react";
+import "./NavBar.css";
 import { Link, useLocation } from "react-router";
 
-function Header() {
+function NavBar() {
+  const [showLinks, setShowLinks] = useState<boolean>(false);
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
   const location = useLocation();
 
-  let headerClass = "navbar";
+  let NavBarClass = "navbar";
   if (location.pathname === "/") {
-    headerClass += " home";
+    NavBarClass += " home";
   } else if (location.pathname === "/MenuPage") {
-    headerClass += " menu";
+    NavBarClass += " menu";
   } else if (location.pathname === "/ReservationPage") {
-    headerClass += " reservation";
+    NavBarClass += " reservation";
   } else if (location.pathname === "/AboutPage") {
-    headerClass += " about";
+    NavBarClass += " about";
   }
 
   return (
-    <section className={headerClass}>
+    <section
+      className={`${NavBarClass} ${showLinks ? "show-nav" : "hide-nav"}`}
+    >
       <img src="logo.png" alt="Logo de la brasserie" />
       <nav>
         <ul>
@@ -43,4 +52,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default NavBar;
