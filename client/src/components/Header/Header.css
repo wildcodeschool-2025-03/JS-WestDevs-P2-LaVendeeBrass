@@ -1,9 +1,11 @@
-header {
+.navbar {
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(217, 217, 217, 0.6);
+  position: fixed;
+  width: 100%;
   z-index: 1;
   backdrop-filter: blur(7px);
 
@@ -34,7 +36,7 @@ header {
 }
 
 @media screen and (min-width: 730px) {
-  header {
+  .navbar {
     nav ul {
       display: flex;
       padding: 0;
@@ -58,6 +60,10 @@ header {
     .burger-menu {
       display: none;
     }
+  }
+
+  .navbar.reservation a {
+    color: var(--primary-color);
   }
 
   @keyframes hoverlinks {
