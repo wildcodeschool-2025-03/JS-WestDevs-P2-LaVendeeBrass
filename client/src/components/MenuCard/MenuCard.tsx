@@ -1,16 +1,73 @@
 import "./MenuCard.css";
+import { useState } from "react";
 
+interface MenuItem {
+  category: string;
+  name: string;
+  ingredients: string;
+  price: number;
+  id: string;
+}
 interface MenuProps {
   category: string;
   imgSrc: string;
+  menu: MenuItem[];
 }
 
-function MenuCard({ category, imgSrc }: MenuProps) {
+interface PageMenuProps {
+  page: MenuProps;
+}
+
+function MenuCard({ page }: PageMenuProps) {
+  const [isExtended, setIsExtended] = useState<boolean>(false);
+
+  const toggleExtension = () => {
+    setIsExtended(!isExtended);
+  };
+
+  const uniqueCategoryItems: MenuItem[] = page.menu.reduce(
+    (accumulator: MenuItem[], current: MenuItem) => {
+      if (!accumulator.find((item) => item.category === current.category)) {
+        accumulator.push(current);
+      }
+      return accumulator;
+    },
+    [],
+  );
+
   return (
-    <figure className="menu-card">
-      <img src={imgSrc} alt={category} />
-      <figcaption>{category}</figcaption>
-    </figure>
+    <button
+      type="button"
+      className={`menu-card${isExtended ? " extended" : ""}`}
+      onClick={toggleExtension}
+    >
+      <img src={page.imgSrc} alt={page.category} />
+      {!isExtended ? (
+        <figcaption>{page.category}</figcaption>
+      ) : (
+        <article>
+          <h2>{page.category}</h2>
+          <div className="menu-list-container">
+            {uniqueCategoryItems.map((item) => (
+              <section key={item.category}>
+                <h3>{item.category}</h3>
+                <ul>
+                  {page.menu
+                    .filter((product) => product.category === item.category)
+                    .map((product) => (
+                      <li key={product.id}>
+                        <h4>{product.name}</h4>
+                        <p>{product.ingredients}</p>
+                        <p className="price">{product.price} €</p>
+                      </li>
+                    ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </article>
+      )}
+    </button>
   );
 }
 
