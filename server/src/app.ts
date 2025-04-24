@@ -359,8 +359,36 @@ const menu = [
   },
 ];
 
+const specialities = [
+  {
+    id: "s1",
+    imgSrc:
+      "https://images.pexels.com/photos/30649002/pexels-photo-30649002/free-photo-of-moules-a-la-vapeur-au-citron-et-aux-herbes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description:
+      "Envie d'un régal simple et efficace ? Nos moules frites sont là pour vous satisfaire.",
+  },
+  {
+    id: "s2",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2021/06/21/15/03/salmon-6353898_1280.jpg",
+    description:
+      "Le saumon à l’unilatérale. La cuisson au four parfaite pour sublimer ce poisson.",
+  },
+  {
+    id: "s3",
+    imgSrc:
+      "https://images.pexels.com/photos/1123249/pexels-photo-1123249.jpeg",
+    description:
+      "Le Fish&Chips. Parce que même si c’est rare, nos voisin les anglais font quelques bonnes choses !",
+  },
+];
+
 app.get("/menu", (req: Request, res: Response) => {
   res.json(menu);
+});
+
+app.get("/specialities", (req: Request, res: Response) => {
+  res.json(specialities);
 });
 
 /* ************************************************************************* */
