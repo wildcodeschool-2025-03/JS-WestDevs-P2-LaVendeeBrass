@@ -5,10 +5,10 @@ import HourInput from "./HourInput";
 function ReservationPage() {
   const [date, setDate] = useState("");
 
-  const [service, setService] = useState("");
+  //const [service, setService] = useState("");
 
   const [number, setNumber] = useState("");
-  s;
+
   const today = new Date();
 
   const minDate = new Date(today);
@@ -31,11 +31,11 @@ function ReservationPage() {
     setNumber(e.target.value);
   };
 
-  const handleServiceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setService(e.target.value);
-  };
+  //const handleServiceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // setService(e.target.value);
+  // };
 
-  const getBackgroundImage = (selectedService) => {};
+  //let backGroundImage = "";
 
   return (
     <main className="reservation-main">
