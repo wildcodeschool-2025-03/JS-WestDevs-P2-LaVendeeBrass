@@ -3,12 +3,14 @@ import "./NavBar.css";
 import { Link, useLocation } from "react-router";
 
 function NavBar() {
+  // burger menu
   const [showLinks, setShowLinks] = useState<boolean>(false);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
 
+  // location navbar
   const location = useLocation();
 
   let NavBarClass = "navbar";
@@ -28,7 +30,7 @@ function NavBar() {
     >
       <img src="logo.png" alt="Logo de la brasserie" />
       <nav>
-        <ul>
+        <ul className="navbar-links">
           <li>
             <Link to="/">accueil</Link>
           </li>
@@ -42,11 +44,11 @@ function NavBar() {
             <Link to="/ReservationPage">réservation</Link>
           </li>
         </ul>
-        <div className="burger-menu">
+        <button type="button" className="burger-menu" onClick={handleShowLinks}>
           <span />
           <span />
           <span />
-        </div>
+        </button>
       </nav>
     </section>
   );
