@@ -9,6 +9,7 @@
   padding: 0;
   color: var(--primary-color);
   /* border: transparent; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 
   img {
     width: 100%;
@@ -30,7 +31,6 @@
 
 .menu-card:hover {
   transform: translateZ(8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -91,19 +91,53 @@
   .price {
     text-align: right;
   }
+}
+.menu-card.extended:hover {
+  transform: translateZ(0);
+}
 
-  .menu-list-container.boissons {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
+@media (min-width: 768px) {
+  .menu-card.extended {
+    width: 80%;
 
-  .menu-list-container.fraiches {
-    height: 600px;
+    article {
+      margin-bottom: 1.5rem;
+    }
 
-    li {
+    h3 {
+      text-align: left;
+    }
+
+    section {
       width: 85%;
       margin: 0 auto;
     }
+
+    ul {
+      padding: 0;
+    }
+
+    .menu-list-container.boissons {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      section {
+        width: 45%;
+      }
+    }
+
+    .menu-list-container.fraiches {
+      height: 610px;
+    }
+
+    .menu-list-container.chaudes {
+      height: 280px;
+    }
+  }
+}
+
+@media (min-width: 1092px) {
+  .menu-card.extended .menu-list-container.fraiches {
+    height: 525px;
   }
 }

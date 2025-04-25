@@ -175,7 +175,7 @@ const menu = [
       },
       {
         id: "bc2",
-        categorie: "Cafés",
+        category: "Cafés",
         name: "Latte Macchiato",
         price: 4.0,
       },
@@ -247,7 +247,7 @@ const menu = [
       },
       {
         id: "bc14",
-        categorie: "Thés & Infusions",
+        category: "Thés & Infusions",
         name: "Infusion aux Plantes",
         price: 3.0,
       },
