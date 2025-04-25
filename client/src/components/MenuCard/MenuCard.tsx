@@ -4,7 +4,8 @@ import { useState } from "react";
 interface MenuItem {
   category: string;
   name: string;
-  ingredients: string;
+  ingredients?: string;
+  castle?: string;
   price: number;
   id: string;
 }
@@ -47,18 +48,25 @@ function MenuCard({ page }: PageMenuProps) {
       ) : (
         <article>
           <h2>{page.category}</h2>
-          <div className="menu-list-container">
+          <div className={`menu-list-container ${page.category.toLowerCase()}`}>
             {uniqueCategoryItems.map((item) => (
               <section key={item.category}>
-                <h3>{item.category}</h3>
+                {item.category && <h3>{item.category}</h3>}
                 <ul>
                   {page.menu
                     .filter((product) => product.category === item.category)
                     .map((product) => (
                       <li key={product.id}>
                         <h4>{product.name}</h4>
-                        <p>{product.ingredients}</p>
                         <p className="price">{product.price} €</p>
+                        {product.ingredients && (
+                          <p className="product-details">
+                            {product.ingredients}
+                          </p>
+                        )}
+                        {product.castle && (
+                          <p className="product-details">{product.castle}</p>
+                        )}
                       </li>
                     ))}
                 </ul>
