@@ -30,7 +30,7 @@ function NavBar() {
     >
       <img src="logo.png" alt="Logo de la brasserie" />
       <nav>
-        <ul className="navbar-links">
+        <ul>
           <li>
             <Link to="/">accueil</Link>
           </li>
@@ -45,8 +45,6 @@ function NavBar() {
           </li>
         </ul>
         <button type="button" className="burger-menu" onClick={handleShowLinks}>
-          <span />
-          <span />
           <span />
         </button>
       </nav>
