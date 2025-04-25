@@ -1,7 +1,42 @@
 import "./ReservationPage.css";
+import { useState } from "react";
 import HourInput from "./HourInput";
 
 function ReservationPage() {
+  const [date, setDate] = useState("");
+
+  const [service, setService] = useState("");
+
+  const [number, setNumber] = useState("");
+  s;
+  const today = new Date();
+
+  const minDate = new Date(today);
+
+  const maxDate = new Date(today);
+
+  maxDate.setDate(today.getDate() + 21);
+
+  const minDateString = minDate.toISOString().split("T")[0];
+
+  const maxDateString = maxDate.toISOString().split("T")[0];
+
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDate(e.target.value);
+  };
+
+  const minNumber = 1;
+  const maxNumber = 8;
+  const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNumber(e.target.value);
+  };
+
+  const handleServiceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setService(e.target.value);
+  };
+
+  const getBackgroundImage = (selectedService) => {};
+
   return (
     <main className="reservation-main">
       <section className="reservation-card">
@@ -59,7 +94,14 @@ function ReservationPage() {
           <div className="inputs">
             <div className="input-group">
               <label htmlFor="date">Date</label>
-              <input id="date" type="date" />
+              <input
+                id="date"
+                type="date"
+                value={date}
+                onChange={handleDateChange}
+                min={minDateString}
+                max={maxDateString}
+              />
             </div>
             <div className="input-group">
               <label htmlFor="service">Service</label>
@@ -75,7 +117,15 @@ function ReservationPage() {
             </div>
             <div className="input-group">
               <label htmlFor="nb">Nombre de personnes</label>
-              <input id="nb" type="number" placeholder=" Nombre de personnes" />
+              <input
+                id="nb"
+                type="number"
+                placeholder=" Nombre de personnes"
+                value={number}
+                onChange={handleNumberChange}
+                min={minNumber}
+                max={maxNumber}
+              />
             </div>
 
             <div className="input-group">
