@@ -19,19 +19,13 @@
     text-transform: uppercase;
     font-weight: 500;
     position: fixed;
-    left: 0;
     top: 0;
     display: none;
-    flex-wrap: wrap;
     margin-top: 72px;
-    /* border: solid 1px red; */
     background-color: rgba(217, 217, 217, 0.6);
 
     li {
-      width: 175px;
-      /* border: solid 1px red; */
       text-align: center;
-      margin: 15px;
     }
 
     a {
@@ -62,21 +56,29 @@
 .show-nav nav ul {
   left: 0;
   display: flex;
-  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
 }
-
+.show-nav nav li {
+  width: 50%;
+  padding: 10px 0;
+}
 @media screen and (min-width: 730px) {
   .navbar {
     nav ul {
       display: flex;
+      flex-wrap: nowrap;
       padding: 0;
       margin: 0 1.5rem 0 0;
-      gap: 2rem;
-      /* text-transform: uppercase; */
-      /* font-family: "Montserrat", serif; */
-      /* font-size: 1.25rem; */
-      /* font-weight: 500; */
+      gap: 1.8rem;
+      background-color: transparent;
       position: relative;
+
+      li {
+        width: auto;
+      }
 
       a {
         /* color: white; */
