@@ -5,7 +5,7 @@ import HourInput from "./HourInput";
 function ReservationPage() {
   const [date, setDate] = useState("");
 
-  //const [service, setService] = useState("");
+  const [service, setService] = useState("");
 
   const [number, setNumber] = useState("");
 
@@ -31,14 +31,23 @@ function ReservationPage() {
     setNumber(e.target.value);
   };
 
-  //const handleServiceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  // setService(e.target.value);
-  // };
+  const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setService(e.target.value);
+  };
 
-  //let backGroundImage = "";
-
+  let backGroundImage = "";
+  if (service === "Service du Midi") {
+    backGroundImage = "reservation/reservation-jour.jpeg";
+  } else {
+    backGroundImage = "reservation/reservation-nuit.jpeg";
+  }
+  console.log(backGroundImage);
+  console.log(service, "coucoou");
   return (
-    <main className="reservation-main">
+    <main
+      className="reservation-main"
+      style={{ backgroundImage: `url(${backGroundImage})` }}
+    >
       <section className="reservation-card">
         <aside className="contact">
           <div className="horaire-container">
@@ -105,7 +114,11 @@ function ReservationPage() {
             </div>
             <div className="input-group">
               <label htmlFor="service">Service</label>
-              <select name="service" id="service">
+              <select
+                name="service"
+                id="service"
+                onChange={handleServiceChange}
+              >
                 <option value="">--Choisir votre Service</option>
                 <option value="">Service du Midi</option>
                 <option value="">Service du Soir</option>

@@ -47,6 +47,9 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+#date {
+  padding-left: 13px;
+}
 
 .reservation-main .formulaire label {
   color: #7a6b6b;
