@@ -8,7 +8,6 @@
   cursor: pointer;
   padding: 0;
   color: var(--primary-color);
-  /* border: transparent; */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 
   img {
@@ -55,7 +54,6 @@
   width: 100%;
   font-family: "Marcellus", sans-serif;
   background-color: var(--card-menu-color);
-  /* color: var(--primary-color); */
 
   h2 {
     font-size: 27px;
@@ -73,10 +71,7 @@
     text-align: start;
   }
 
-  h4 {
-    margin: 0;
-  }
-
+  h4,
   p {
     margin: 0;
   }

@@ -1,23 +1,6 @@
 import "./MenuCard.css";
 import { useState } from "react";
-
-interface MenuItem {
-  category: string;
-  name: string;
-  ingredients?: string;
-  castle?: string;
-  price: number;
-  id: string;
-}
-interface MenuProps {
-  category: string;
-  imgSrc: string;
-  menu: MenuItem[];
-}
-
-interface PageMenuProps {
-  page: MenuProps;
-}
+import type { MenuItem, PageMenuProps } from "./MenuTypes";
 
 function MenuCard({ page }: PageMenuProps) {
   const [isExtended, setIsExtended] = useState<boolean>(false);
