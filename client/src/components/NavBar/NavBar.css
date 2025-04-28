@@ -23,6 +23,9 @@
     display: none;
     margin-top: 72px;
     background-color: rgba(217, 217, 217, 0.6);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 
     li {
       text-align: center;
@@ -30,7 +33,7 @@
 
     a {
       text-decoration: none;
-      color: white;
+      color: var(--primary-color);
       font-size: 1.25rem;
     }
   }
@@ -39,14 +42,13 @@
     width: 37px;
     height: 37px;
     display: flex;
+    background-color: inherit;
+    border: inherit;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
     margin-right: 0.5rem;
-    position: relative;
-  }
-
-  .burger-menu:hover {
+    padding: 0;
     cursor: pointer;
   }
 
@@ -59,6 +61,7 @@
     background-color: var(--primary-color);
     display: block;
     position: relative;
+    transition: all 0.3s ease-in-out;
   }
 
   .burger-menu span::before,
@@ -83,11 +86,26 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
+  opacity: 1; /* Devient opaque */
+  transform: translateY(0);
 }
 .show-nav nav li {
   width: 50%;
   padding: 10px 0;
 }
+
+.show-nav .burger-menu span {
+  background: transparent;
+}
+
+.show-nav .burger-menu span::before {
+  transform: rotate(45deg);
+}
+
+.show-nav .burger-menu span::after {
+  transform: rotate(-45deg);
+}
+
 @media screen and (min-width: 730px) {
   .navbar {
     nav ul {
@@ -98,14 +116,14 @@
       gap: 1.8rem;
       background-color: transparent;
       position: relative;
+      opacity: 1;
 
       li {
         width: auto;
       }
 
       a {
-        /* color: white; */
-        /* text-decoration: none; */
+        color: white;
         transform: translateY(0%);
       }
       li:hover {
