@@ -18,14 +18,16 @@
     font-family: "Montserrat", serif;
     text-transform: uppercase;
     font-weight: 500;
-    position: fixed;
+    position: absolute;
     top: 0;
-    display: none;
+    right: -190px;
+    /* display: none; */
     margin-top: 72px;
     background-color: rgba(217, 217, 217, 0.6);
-    opacity: 0;
     transform: translateY(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: background-color 0.5s ease, transform 0.3s ease,
+      opacity 0.3s ease;
+    opacity: 0;
 
     li {
       text-align: center;
@@ -86,8 +88,8 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
-  opacity: 1; /* Devient opaque */
-  transform: translateY(0);
+  transform: translateY(0); /* La navbar se déplace vers sa position normale */
+  opacity: 1;
 }
 .show-nav nav li {
   width: 50%;
@@ -116,7 +118,8 @@
       gap: 1.8rem;
       background-color: transparent;
       position: relative;
-      opacity: 1;
+      right: 0;
+      transform: translateY(0);
 
       li {
         width: auto;
