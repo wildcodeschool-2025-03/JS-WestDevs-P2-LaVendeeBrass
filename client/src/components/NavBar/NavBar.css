@@ -22,14 +22,14 @@
     top: 0;
     right: -190px;
     margin-top: 72px;
+    /* backdrop-filter: blur(7px); */
+    background-color: rgba(217, 217, 217, 0.6);
     transform: translateY(-100%);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
 
     li {
       text-align: center;
-      background-color: rgba(217, 217, 217, 0.6);
-      backdrop-filter: blur(7px);
     }
 
     a {
@@ -87,7 +87,7 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
-  transform: translateY(0); /* La navbar se déplace vers sa position normale */
+  transform: translateY(0);
   opacity: 1;
 }
 .show-nav nav li {
@@ -128,7 +128,7 @@
 
       a {
         color: white;
-        transform: translateY(0%);
+        transform: translateY(0);
       }
       li:hover {
         animation: hoverlinks 0.3s linear forwards;
