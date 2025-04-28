@@ -98,7 +98,7 @@ function HomePage() {
               <p>À très bientôt !</p>
             </div>
             <div className="reservation-link-box">
-              <Link to="/">Réserver</Link>
+              <Link to="/ReservationPage">Réserver</Link>
             </div>
           </article>
         </section>
