@@ -18,19 +18,18 @@
     font-family: "Montserrat", serif;
     text-transform: uppercase;
     font-weight: 500;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -190px;
-    /* display: none; */
     margin-top: 72px;
-    background-color: rgba(217, 217, 217, 0.6);
     transform: translateY(-100%);
-    transition: background-color 0.5s ease, transform 0.3s ease,
-      opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
 
     li {
       text-align: center;
+      background-color: rgba(217, 217, 217, 0.6);
+      backdrop-filter: blur(7px);
     }
 
     a {
@@ -120,6 +119,8 @@
       position: relative;
       right: 0;
       transform: translateY(0);
+      opacity: 1;
+      transition: none;
 
       li {
         width: auto;
