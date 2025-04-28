@@ -20,7 +20,7 @@ const menu = [
     menu: [
       {
         id: "e1",
-        category: "sea",
+        category: "Produits de la Mer",
         name: "Tartare de saumon à l’aneth et citron vert",
         ingredients:
           "Saumon frais, citron vert, aneth, câpres, échalote, huile d’olive, sel, poivre.",
@@ -28,7 +28,7 @@ const menu = [
       },
       {
         id: "e2",
-        category: "sea",
+        category: "Produits de la Mer",
         name: "Céviché de dorade au lait de coco",
         ingredients:
           "Dorade, mangue, citron vert, oignon rouge, coriandre, lait de coco, piment doux.",
@@ -36,7 +36,7 @@ const menu = [
       },
       {
         id: "e3",
-        category: "sea",
+        category: "Produits de la Mer",
         name: "Soupe de poissons maison",
         ingredients:
           "Poissons de roche, tomates, ail, oignon, fenouil, vin blanc, bouquet garni, huile d’olive, croûtons, rouille, fromage râpé.",
@@ -44,7 +44,7 @@ const menu = [
       },
       {
         id: "e4",
-        category: "meat",
+        category: "Viandes",
         name: "Terrine de campagne maison et pickles d’oignons rouges",
         ingredients:
           "Chair à saucisse, foie de volaille, œufs, pain trempé au lait, échalotes, cognac, sel, poivre, thym, oignons rouges, vinaigre.",
@@ -52,7 +52,7 @@ const menu = [
       },
       {
         id: "e5",
-        category: "meat",
+        category: "Viandes",
         name: "Œuf cocotte au lard fumé et champignons",
         ingredients:
           "Œufs, lard fumé, champignons de Paris, crème fraîche, beurre, ciboulette, sel, poivre.",
@@ -60,7 +60,7 @@ const menu = [
       },
       {
         id: "e6",
-        category: "vegetarian",
+        category: "Végétarien",
         name: "Velouté de potimarron et noisettes torréfiées",
         ingredients:
           "Potimarron, pommes de terre, oignon, crème, bouillon de légumes, muscade, noisettes grillées.",
@@ -76,7 +76,7 @@ const menu = [
     menu: [
       {
         id: "p1",
-        category: "sea",
+        category: "Produits de la Mer",
         name: "Moules, frites",
         ingredients:
           "Moules de Bouchot, Échalotes, Persil, Ail, Vin blanc sec & Frites",
@@ -84,14 +84,14 @@ const menu = [
       },
       {
         id: "p2",
-        category: "sea",
+        category: "Produits de la Mer",
         name: "Fish & Chips",
         ingredients: "Sablaise, Bière, Œuf & Frites",
         price: 14,
       },
       {
         id: "p3",
-        category: "sea",
+        category: "Produits de la Mer",
         name: "Saumon à l'unilatérale, riz aux herbes",
         ingredients:
           "Pavé de saumon, fleur de sel, persil, estragon, ciboulette, cerfeuil & Riz",
@@ -99,7 +99,7 @@ const menu = [
       },
       {
         id: "p4",
-        category: "meat",
+        category: "Viandes",
         name: "Filet de bœuf, frites & sauce au poivre",
         ingredients:
           "Viande de Limousine 270g, Thym, Échalotes, Estragon, Vin Blanc, Œuf & Frites",
@@ -107,7 +107,7 @@ const menu = [
       },
       {
         id: "p5",
-        category: "meat",
+        category: "Viandes",
         name: "Bavette de bœuf à l'ail, frites & sauce à l'échalote",
         ingredients:
           "Viande de Limousine 180g, Ail, Échalotes, Origan, Persil & Frites",
@@ -115,7 +115,7 @@ const menu = [
       },
       {
         id: "p6",
-        category: "vegetarian",
+        category: "Végétarien",
         name: "Falafels, frites & sauce au yaourt",
         ingredients:
           "Pois chiches, Ail, Coriandre, Cumin, Yaourt, Baies Roses & Frites",
@@ -169,15 +169,15 @@ const menu = [
     menu: [
       {
         id: "bc1",
-        category: "café",
+        category: "Cafés",
         name: "Cappuccino",
         price: 3.5,
       },
       {
         id: "bc2",
-        categorie: "café",
+        category: "Cafés",
         name: "Latte Macchiato",
-        prix: 4.0,
+        price: 4.0,
       },
       {
         id: "bc3",
@@ -189,47 +189,47 @@ const menu = [
         id: "bc4",
         category: "Chocolats",
         name: "Chocolat Chaud Viennois",
-        Price: 4.5,
+        price: 4.5,
       },
       {
         id: "bc5",
-        category: "café",
+        category: "Cafés",
         name: "Café Expresso",
-        Price: 2.0,
+        price: 2.0,
       },
       {
         id: "bc6",
-        category: "café",
+        category: "Cafés",
         name: "Double Expresso",
-        Price: 3.5,
+        price: 3.5,
       },
       {
         id: "bc7",
-        category: "café",
+        category: "Cafés",
         name: "Café Allongé",
         price: 2.5,
       },
       {
         id: "bc8",
-        category: "café",
+        category: "Cafés",
         name: "Café Crème",
         price: 3.0,
       },
       {
         id: "bc9",
-        category: "café",
+        category: "Cafés",
         name: "Café Viennois",
         price: 4.0,
       },
       {
         id: "bc10",
-        category: "café",
+        category: "Cafés",
         name: "Café Américain",
         price: 2.8,
       },
       {
         id: "bc11",
-        category: "café",
+        category: "Cafés",
         name: "Café Décaféiné",
         price: 2.5,
       },
@@ -243,11 +243,11 @@ const menu = [
         id: "bc13",
         category: "Thés & Infusions",
         name: "Thé Vert",
-        prix: 3.0,
+        price: 3.0,
       },
       {
         id: "bc14",
-        categorie: "Thés & Infusions",
+        category: "Thés & Infusions",
         name: "Infusion aux Plantes",
         price: 3.0,
       },
