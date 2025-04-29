@@ -8,12 +8,15 @@
 
   h1 {
     text-align: center;
+    padding-top: 40px;
     font-family: "Marcellus", sans-serif;
     color: white;
     font-size: 2rem;
   }
   .menu-list {
     perspective: 500px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -26,9 +29,10 @@
 
     .menu-list {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      max-width: 1600px;
+      max-width: 1400px;
       margin: auto;
     }
   }
