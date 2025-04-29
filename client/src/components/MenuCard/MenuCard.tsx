@@ -1,4 +1,5 @@
 import "./MenuCard.css";
+import { motion } from "motion/react";
 import { useState } from "react";
 import type { MenuItem, PageMenuProps } from "./MenuTypes";
 
@@ -20,17 +21,28 @@ function MenuCard({ page }: PageMenuProps) {
   );
 
   return (
-    <button
-      type="button"
+    <motion.div
+      transition={{ layout: { duration: 0.5 } }}
+      layout
       className={`menu-card${isExtended ? " extended" : ""}`}
       onClick={toggleExtension}
+      whileHover={
+        !isExtended
+          ? {
+              z: 8,
+              transition: { duration: 0.3 },
+            }
+          : undefined
+      }
     >
       <img src={page.imgSrc} alt={page.category} />
-      {!isExtended ? (
-        <figcaption>{page.category}</figcaption>
-      ) : (
-        <article>
-          <h2>{page.category}</h2>
+      <figcaption>{page.category}</figcaption>
+      {isExtended && (
+        <motion.article
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
           <div className={`menu-list-container ${page.category.toLowerCase()}`}>
             {uniqueCategoryItems.map((item) => (
               <section key={item.category}>
@@ -56,9 +68,9 @@ function MenuCard({ page }: PageMenuProps) {
               </section>
             ))}
           </div>
-        </article>
+        </motion.article>
       )}
-    </button>
+    </motion.div>
   );
 }
 
