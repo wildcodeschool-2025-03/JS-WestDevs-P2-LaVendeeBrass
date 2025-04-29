@@ -9,17 +9,23 @@ function ReservationPage() {
 
   const [number, setNumber] = useState("");
 
+  const formatDateISO = (date: Date) => {
+    const isoString = date.toISOString();
+    const formattedDate = isoString.split("T")[0];
+    return formattedDate;
+  };
+
   const today = new Date();
 
-  const minDate = new Date(today);
+  //const minDate = new Date(today);
 
-  const maxDate = new Date(today);
+  //const maxDate = new Date(today);
 
-  maxDate.setDate(today.getDate() + 21);
+  today.setDate(today.getDate() + 21);
 
-  const minDateString = minDate.toISOString().split("T")[0];
+  const dateString = today.toISOString().split("T")[0];
 
-  const maxDateString = maxDate.toISOString().split("T")[0];
+  // const maxDateString = maxDate.toISOString().split("T")[0];
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDate(e.target.value);
@@ -108,8 +114,8 @@ function ReservationPage() {
                 type="date"
                 value={date}
                 onChange={handleDateChange}
-                min={minDateString}
-                max={maxDateString}
+                // min={today}
+                max={dateString}
               />
             </div>
             <div className="input-group">
@@ -118,10 +124,11 @@ function ReservationPage() {
                 name="service"
                 id="service"
                 onChange={handleServiceChange}
+                value={service}
               >
-                <option value="">--Choisir votre Service</option>
-                <option value="">Service du Midi</option>
-                <option value="">Service du Soir</option>
+                <option>--Choisir votre Service</option>
+                <option>Service du Midi</option>
+                <option>Service du Soir</option>
               </select>
             </div>
             <div className="input-group">
