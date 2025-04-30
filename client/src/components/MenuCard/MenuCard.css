@@ -2,13 +2,14 @@
   width: 208px;
   margin: 30px auto;
   border-radius: 20px;
-  transition: transform 0.3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: transform 0.3s ease, box-shadow 0.5s ease;
   cursor: pointer;
+  padding: 0;
+  color: var(--primary-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 
   img {
-    width: 208px;
+    width: 100%;
     height: 270px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
@@ -25,23 +26,110 @@
   }
 }
 
-.menu-card:hover {
-  transform: translateZ(8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
 @media (min-width: 768px) {
   .menu-card {
     margin: 30px 30px;
     width: 362px;
 
     img {
-      width: 362px;
+      width: 100%;
       height: 458px;
     }
 
     figcaption {
       font-size: 2rem;
     }
+  }
+}
+
+/* -------------------------- EXTENDED CARD ------------------------------ */
+
+.menu-card.extended {
+  width: 100%;
+  font-family: "Marcellus", sans-serif;
+  background-color: var(--card-menu-color);
+
+  h2 {
+    font-size: 27px;
+    font-family: "MarcellusSC", sans-serif;
+    margin-top: 0.5rem;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0.8rem;
+    text-align: start;
+  }
+
+  h4,
+  p {
+    margin: 0;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 80% 15%;
+    gap: 0 5%;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-card.extended {
+    width: 80%;
+
+    article {
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    section {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    .menu-list-container.boissons {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      section {
+        width: 45%;
+      }
+    }
+
+    .menu-list-container.fraiches {
+      height: 715px;
+    }
+
+    .menu-list-container.chaudes {
+      height: 320px;
+    }
+  }
+}
+
+@media (min-width: 792px) {
+  .menu-card.extended .menu-list-container.fraiches {
+    height: 695px;
+  }
+}
+
+@media (min-width: 1256px) {
+  .menu-card.extended .menu-list-container.fraiches {
+    height: 615px;
   }
 }

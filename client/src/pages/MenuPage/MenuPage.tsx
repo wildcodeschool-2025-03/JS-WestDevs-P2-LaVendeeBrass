@@ -6,6 +6,7 @@ interface MenuData {
   id: string;
   category: string;
   imgSrc: string;
+  menu: [];
 }
 
 function MenuPage() {
@@ -21,10 +22,8 @@ function MenuPage() {
     <main className="menu-page">
       <h1>LE MENU</h1>
       <section className="menu-list">
-        {arrayOfMenus.map((el) => {
-          return (
-            <MenuCard key={el.id} imgSrc={el.imgSrc} category={el.category} />
-          );
+        {arrayOfMenus.map((page) => {
+          return <MenuCard key={page.id} page={page} />;
         })}
       </section>
     </main>
