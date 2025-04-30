@@ -5,27 +5,19 @@ import HourInput from "./HourInput";
 function ReservationPage() {
   const [date, setDate] = useState("");
 
-  const [service, setService] = useState("");
+  const [service, setService] = useState<
+    "Service du Midi" | "Service du Soir" | ""
+  >("");
 
   const [number, setNumber] = useState("");
 
-  const formatDateISO = (date: Date) => {
-    const isoString = date.toISOString();
-    const formattedDate = isoString.split("T")[0];
+  const formatDate = (currDate: Date, nbOfDays: number) => {
+    const dateString = currDate.setDate(currDate.getDate() + nbOfDays);
+    const formattedDate = new Date(dateString).toISOString().split("T")[0];
     return formattedDate;
   };
 
   const today = new Date();
-
-  //const minDate = new Date(today);
-
-  //const maxDate = new Date(today);
-
-  today.setDate(today.getDate() + 21);
-
-  const dateString = today.toISOString().split("T")[0];
-
-  // const maxDateString = maxDate.toISOString().split("T")[0];
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDate(e.target.value);
@@ -38,7 +30,7 @@ function ReservationPage() {
   };
 
   const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setService(e.target.value);
+    setService(e.target.value as "Service du Midi" | "Service du Soir" | "");
   };
 
   let backGroundImage = "";
@@ -47,8 +39,7 @@ function ReservationPage() {
   } else {
     backGroundImage = "reservation/reservation-nuit.jpeg";
   }
-  console.log(backGroundImage);
-  console.log(service, "coucoou");
+
   return (
     <main
       className="reservation-main"
@@ -72,10 +63,7 @@ function ReservationPage() {
             <div>
               <p>Soir :</p>
               <p>
-                Mardi - Jeudi : <span>19h - 21h</span>
-              </p>
-              <p>
-                Vendredi - Samedi : <span>19h - 22h</span>
+                Mardi - Samedi : <span>19h - 22h</span>
               </p>
             </div>
           </div>
@@ -114,8 +102,8 @@ function ReservationPage() {
                 type="date"
                 value={date}
                 onChange={handleDateChange}
-                // min={today}
-                max={dateString}
+                min={formatDate(today, 0)}
+                max={formatDate(today, 21)}
               />
             </div>
             <div className="input-group">
@@ -133,7 +121,7 @@ function ReservationPage() {
             </div>
             <div className="input-group">
               <label htmlFor="heure">Heure</label>
-              <HourInput />
+              <HourInput service={service} />
             </div>
             <div className="input-group">
               <label htmlFor="nb">Nombre de personnes</label>

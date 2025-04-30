@@ -6,7 +6,7 @@
   background-image: url("reservation/reservation-jour.jpeg");
   background-size: cover;
   background-position: center;
-  transition: background-image 1s;
+  transition: background-image 2s;
 }
 
 .reservation-main * {
