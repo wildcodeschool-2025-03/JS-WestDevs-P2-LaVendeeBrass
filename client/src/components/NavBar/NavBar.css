@@ -30,7 +30,6 @@
 
 .burger-menu {
   width: 37px;
-  height: 37px;
   display: flex;
   background: none;
   border: inherit;
@@ -98,6 +97,8 @@
     ul {
       height: 0px;
       position: absolute;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
   }
 
@@ -126,6 +127,7 @@
         text-transform: uppercase;
         font-weight: 500;
         justify-items: center;
+        transition: opacity 0.6s ease-in-out;
         margin: 0;
         padding: 0;
         opacity: 1;
