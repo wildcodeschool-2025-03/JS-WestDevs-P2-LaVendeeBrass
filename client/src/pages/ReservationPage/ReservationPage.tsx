@@ -1,9 +1,50 @@
 import "./ReservationPage.css";
+import { useState } from "react";
 import HourInput from "./HourInput";
 
 function ReservationPage() {
+  const [date, setDate] = useState("");
+
+  const [service, setService] = useState<
+    "Service du Midi" | "Service du Soir" | ""
+  >("");
+
+  const [number, setNumber] = useState("");
+
+  const formatDate = (currDate: Date, nbOfDays: number) => {
+    const dateString = currDate.setDate(currDate.getDate() + nbOfDays);
+    const formattedDate = new Date(dateString).toISOString().split("T")[0];
+    return formattedDate;
+  };
+
+  const today = new Date();
+
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDate(e.target.value);
+  };
+
+  const minNumber = 1;
+  const maxNumber = 8;
+  const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNumber(e.target.value);
+  };
+
+  const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setService(e.target.value as "Service du Midi" | "Service du Soir" | "");
+  };
+
+  let backGroundImage = "";
+  if (service === "Service du Midi") {
+    backGroundImage = "reservation/reservation-jour.jpeg";
+  } else {
+    backGroundImage = "reservation/reservation-nuit.jpeg";
+  }
+
   return (
-    <main className="reservation-main">
+    <main
+      className="reservation-main"
+      style={{ backgroundImage: `url(${backGroundImage})` }}
+    >
       <section className="reservation-card">
         <aside className="contact">
           <div className="horaire-container">
@@ -22,10 +63,7 @@ function ReservationPage() {
             <div>
               <p>Soir :</p>
               <p>
-                Mardi - Jeudi : <span>19h - 21h</span>
-              </p>
-              <p>
-                Vendredi - Samedi : <span>19h - 22h</span>
+                Mardi - Samedi : <span>19h - 22h</span>
               </p>
             </div>
           </div>
@@ -59,23 +97,43 @@ function ReservationPage() {
           <div className="inputs">
             <div className="input-group">
               <label htmlFor="date">Date</label>
-              <input id="date" type="date" />
+              <input
+                id="date"
+                type="date"
+                value={date}
+                onChange={handleDateChange}
+                min={formatDate(today, 0)}
+                max={formatDate(today, 21)}
+              />
             </div>
             <div className="input-group">
               <label htmlFor="service">Service</label>
-              <select name="service" id="service">
-                <option value="">--Choisir votre Service</option>
-                <option value="">Service du Midi</option>
-                <option value="">Service du Soir</option>
+              <select
+                name="service"
+                id="service"
+                onChange={handleServiceChange}
+                value={service}
+              >
+                <option>--Choisir votre Service</option>
+                <option>Service du Midi</option>
+                <option>Service du Soir</option>
               </select>
             </div>
             <div className="input-group">
               <label htmlFor="heure">Heure</label>
-              <HourInput />
+              <HourInput service={service} />
             </div>
             <div className="input-group">
               <label htmlFor="nb">Nombre de personnes</label>
-              <input id="nb" type="number" placeholder=" Nombre de personnes" />
+              <input
+                id="nb"
+                type="number"
+                placeholder=" Nombre de personnes"
+                value={number}
+                onChange={handleNumberChange}
+                min={minNumber}
+                max={maxNumber}
+              />
             </div>
 
             <div className="input-group">

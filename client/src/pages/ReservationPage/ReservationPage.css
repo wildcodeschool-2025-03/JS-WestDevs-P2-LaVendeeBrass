@@ -6,6 +6,7 @@
   background-image: url("reservation/reservation-jour.jpeg");
   background-size: cover;
   background-position: center;
+  transition: background-image 2s;
 }
 
 .reservation-main * {
@@ -47,7 +48,13 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+#date {
+  padding-left: 13px;
+}
 
+#nb {
+  padding-left: 10px;
+}
 .reservation-main .formulaire label {
   color: #7a6b6b;
   margin-bottom: 5px;
