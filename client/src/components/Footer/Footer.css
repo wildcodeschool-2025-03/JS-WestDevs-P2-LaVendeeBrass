@@ -11,7 +11,7 @@ footer ul {
   flex-wrap: wrap;
   list-style: none;
   color: white;
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   margin: 0;
   height: 100%;
 
@@ -26,7 +26,7 @@ footer ul {
 
   h3 {
     font-family: "MarcellusSC", sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0.5rem 0 1rem;
   }
 
@@ -37,7 +37,7 @@ footer ul {
 
   li {
     text-align: center;
-    line-height: 0.8;
+    line-height: 0.6;
     width: 100%;
     flex-basis: 1;
 
@@ -68,9 +68,9 @@ footer .reseaux {
   }
 
   img {
-    height: 30px;
-    width: 30px;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.45));
+    height: 25px;
+    width: 25px;
+    filter: drop-shadow(3px 3px 15px rgba(255, 255, 255, 0.6));
   }
 }
 
@@ -82,7 +82,7 @@ footer .reseaux {
     text-align: center;
 
     h3 {
-      font-size: 32px;
+      font-size: 20px;
       margin: 0.5rem 0 1rem;
     }
     p {
@@ -96,11 +96,12 @@ footer .reseaux {
 
   footer ul li {
     width: 100%;
+    line-height: 0.5;
   }
 
   footer .reseaux img {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
   }
   footer .reseaux {
     height: inherit;

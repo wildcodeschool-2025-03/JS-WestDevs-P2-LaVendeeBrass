@@ -16,7 +16,7 @@ function Footer() {
           <section>
             <a href=" ">
               <img
-                src="logo-facebook.svg"
+                src="loge-facebook.png"
                 alt="Lien vers notre page Facebook"
               />
             </a>
