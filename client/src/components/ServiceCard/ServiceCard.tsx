@@ -1,17 +1,6 @@
 import { useState } from "react";
 import "./ServiceCard.css";
-
-interface MemberProps {
-  id: string;
-  name: string;
-  imgAvatar: string;
-}
-
-export interface ServiceProps {
-  imgCategory: string;
-  category: string;
-  members: MemberProps[];
-}
+import type { ServiceProps } from "./ServiceType";
 
 function ServiceCard({ imgCategory, category, members }: ServiceProps) {
   const [isExpanded, setIsExpanded] = useState(false);

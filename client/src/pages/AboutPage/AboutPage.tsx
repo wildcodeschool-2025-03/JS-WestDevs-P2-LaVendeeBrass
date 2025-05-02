@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import type { ServiceProps } from "../../components/ServiceCard/ServiceCard";
+import type { ServiceProps } from "../../components/ServiceCard/ServiceType";
 
 import "./AboutPage.css";
 
