@@ -7,11 +7,13 @@ interface MemberProps {
   imgAvatar: string;
 }
 
-interface ServiceProps {
+
+export interface ServiceProps {
   imgCategory: string;
   category: string;
   members: MemberProps[];
 }
+
 
 function ServiceCard({ imgCategory, category, members }: ServiceProps) {
   const [isExpanded, setIsExpanded] = useState(false);
