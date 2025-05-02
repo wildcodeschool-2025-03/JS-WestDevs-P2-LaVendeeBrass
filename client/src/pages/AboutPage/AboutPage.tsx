@@ -4,20 +4,21 @@ import type { ServiceProps } from "../../components/ServiceCard/ServiceCard";
 
 import "./AboutPage.css";
 
-
-
 function AboutPage() {
-  const [arrayOfServices,setArrayOfServices] = useState<ServiceProps[]>([])
+  const [arrayOfServices, setArrayOfServices] = useState<ServiceProps[]>([]);
   useEffect(() => {
-    fetch("http://localhost:3310/serviceTeam").then((response) => response.json()).then((data) => setArrayOfServices(data) )
-  },[])
+    fetch("http://localhost:3310/serviceTeam")
+      .then((response) => response.json())
+      .then((data) => setArrayOfServices(data));
+  }, []);
 
   return (
     <main className="about-main">
       <section className="about-content">
         <div className="about-history">
           <h2>
-            L'Histoire du Vendée Brass : <span>un Goût de Loire-Atlantique</span>
+            L'Histoire du Vendée Brass :{" "}
+            <span>un Goût de Loire-Atlantique</span>
           </h2>
           <p>
             L'Éclosion d'une Passion : <br /> L'aventure du "Vendée Brass" a
