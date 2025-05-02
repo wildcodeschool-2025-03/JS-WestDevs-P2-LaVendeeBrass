@@ -14,20 +14,20 @@ function Footer() {
         <li className="reseaux">
           <h3>Réseaux</h3>
           <section>
-            <a href="https://fr-fr.facebook.com/">
+            <a href="https://fr-fr.facebook.com/" target="blank">
               <img
                 src="logo-facebook.png"
                 alt="Lien vers notre page Facebook"
               />
             </a>
-            <a href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/" target="blank">
               <img
                 src="logo-instagram.svg"
                 alt="Lien vers notre page Instagram"
               />
             </a>
 
-            <a href="https://x.com/">
+            <a href="https://x.com/" target="blank">
               <img src="logo-X.png" alt="Lien vers notre page Twitter" />
             </a>
           </section>
