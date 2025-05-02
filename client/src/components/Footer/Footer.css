@@ -11,7 +11,7 @@ footer ul {
   flex-wrap: wrap;
   list-style: none;
   color: white;
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   margin: 0;
   height: 100%;
 
@@ -26,13 +26,14 @@ footer ul {
 
   h3 {
     font-family: "MarcellusSC", sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0.5rem 0 1rem;
   }
 
   p {
     font-family: "Marcellus", sans-serif;
     font-size: 12px;
+    margin: 0.5rem;
   }
 
   li {
@@ -68,9 +69,9 @@ footer .reseaux {
   }
 
   img {
-    height: 30px;
-    width: 30px;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.45));
+    height: 25px;
+    width: 25px;
+    filter: drop-shadow(5px 5px 7px rgba(17, 17, 17, 0.8));
   }
 }
 
@@ -82,8 +83,8 @@ footer .reseaux {
     text-align: center;
 
     h3 {
-      font-size: 32px;
-      margin: 0.5rem 0 1rem;
+      font-size: 20px;
+      margin: 0.5rem 1rem 0rem 1rem;
     }
     p {
       font-size: 14px;
@@ -96,11 +97,12 @@ footer .reseaux {
 
   footer ul li {
     width: 100%;
+    line-height: 1;
   }
 
   footer .reseaux img {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
   }
   footer .reseaux {
     height: inherit;
@@ -109,4 +111,20 @@ footer .reseaux {
       padding: 0;
     }
   }
+
+  footer {
+    height: 120px;
+  }
 }
+
+/* @media screen and (min-width: 846px) { */
+/* ul { */
+/* display: flex; */
+/* flex-direction: column; */
+/* min-height: 100vh; */
+/* } */
+/* } */
+
+/*#root { */
+/* 
+/* } */
