@@ -33,6 +33,7 @@ footer ul {
   p {
     font-family: "Marcellus", sans-serif;
     font-size: 12px;
+    margin: 0.5rem;
   }
 
   li {
@@ -83,7 +84,7 @@ footer .reseaux {
 
     h3 {
       font-size: 20px;
-      margin: 0.5rem 0 1rem;
+      margin: 0.5rem 1rem 0rem 1rem;
     }
     p {
       font-size: 14px;
@@ -96,7 +97,7 @@ footer .reseaux {
 
   footer ul li {
     width: 100%;
-    line-height: 0.5;
+    line-height: 1;
   }
 
   footer .reseaux img {
@@ -110,4 +111,20 @@ footer .reseaux {
       padding: 0;
     }
   }
+
+  footer {
+    height: 120px;
+  }
 }
+
+/* @media screen and (min-width: 846px) { */
+/* ul { */
+/* display: flex; */
+/* flex-direction: column; */
+/* min-height: 100vh; */
+/* } */
+/* } */
+
+/*#root { */
+/* 
+/* } */
