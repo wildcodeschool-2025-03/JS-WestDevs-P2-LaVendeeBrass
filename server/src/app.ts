@@ -383,12 +383,90 @@ const specialities = [
   },
 ];
 
+const arrayOfServices = [
+  {
+    category: "Les Cuisiniers",
+    imgCategory:
+      "https://www.svgrepo.com/show/48030/female-sportive-avatar-image.svg",
+    members: [
+      {
+        id: "c1",
+        name: "Léa",
+        imgAvatar: "https://www.svgrepo.com/show/44415/woman-avatar.svg",
+      },
+      {
+        id: "c2",
+        name: "Jean",
+        imgAvatar: "https://www.svgrepo.com/show/174713/young-man-avatar.svg",
+      },
+      {
+        id: "c3",
+        name: "Julie",
+        imgAvatar:
+          "https://www.svgrepo.com/show/48030/female-sportive-avatar-image.svg",
+      },
+    ],
+  },
+
+  {
+    category: "Les Serveurs",
+    imgCategory: "https://www.svgrepo.com/show/44415/woman-avatar.svg",
+    members: [
+      {
+        id: "s1",
+        name: "Gérard",
+        imgAvatar: "https://www.svgrepo.com/show/174713/young-man-avatar.svg",
+      },
+      {
+        id: "s2",
+        name: "Sophie",
+        imgAvatar: "https://www.svgrepo.com/show/44415/woman-avatar.svg",
+      },
+      {
+        id: "s3",
+        name: "Juliette",
+        imgAvatar:
+          "https://www.svgrepo.com/show/48030/female-sportive-avatar-image.svg",
+      },
+      {
+        id: "s4",
+        name: "Yoann",
+        imgAvatar:
+          "https://www.svgrepo.com/show/140760/man-with-short-hair-profile-avatar.svg",
+      },
+    ],
+  },
+
+  {
+    category: "Les Fondateurs",
+    imgCategory:
+      "https://www.svgrepo.com/show/140760/man-with-short-hair-profile-avatar.svg",
+    members: [
+      {
+        id: "f1",
+        name: "Rémy",
+        imgAvatar: "https://www.svgrepo.com/show/174713/young-man-avatar.svg",
+      },
+      {
+        id: "f2",
+        name: "Tristant",
+        imgAvatar:
+          "https://www.svgrepo.com/show/140760/man-with-short-hair-profile-avatar.svg",
+      },
+    ],
+  },
+];
+
 app.get("/menu", (req: Request, res: Response) => {
   res.json(menu);
 });
 
 app.get("/specialities", (req: Request, res: Response) => {
   res.json(specialities);
+});
+
+app.get("/serviceTeam", (req: Request, res: Response) => {
+  res.json(arrayOfServices);
 });
 
 /* ************************************************************************* */

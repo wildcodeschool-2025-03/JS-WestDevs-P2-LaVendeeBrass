@@ -1,0 +1,72 @@
+.service-card .service-category {
+  color: white;
+  font-family: "Marcellus", serif;
+  margin: 0;
+}
+
+.service-card .service-category {
+  max-width: 100px;
+}
+
+.service-card h2 {
+  font-family: "MarcellusSC", serif;
+}
+
+.service-card .service-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.service-card .service-button {
+  background-color: #8fa4b1;
+  border-radius: 32px;
+  color: white;
+}
+
+.service-card .image-service {
+  margin: 16px;
+  width: 30vh;
+}
+
+.service-card .members {
+  padding: 8px;
+}
+
+.service-card .member-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #8fa4b1;
+  border-radius: 32px;
+  margin: 24px;
+  max-width: 100%;
+}
+
+.service-card .image-member {
+  width: 25vh;
+  margin: 8px;
+}
+
+@media (min-width: 800px) {
+  .service-card .service-button {
+    margin: 32px;
+  }
+
+  .service-card .members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 16px;
+  }
+
+  .service-card .member-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
