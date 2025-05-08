@@ -1,0 +1,25 @@
+.menu-sidebar {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-evenly;
+
+  li {
+    width: 0;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    transform: translateX(-50%);
+
+    img {
+      width: 25px;
+      display: block;
+      margin: 0 auto 0.3rem;
+    }
+    span {
+      color: whitesmoke;
+    }
+  }
+}

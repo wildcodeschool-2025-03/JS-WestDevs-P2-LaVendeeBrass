@@ -1,13 +1,17 @@
 import "./MenuCard.css";
 import { motion } from "motion/react";
 import { useState } from "react";
-import type { MenuItem, PageMenuProps } from "./MenuTypes";
+import type { MenuCardsProps, MenuItem } from "../../pages/MenuPage/MenuTypes";
 
-function MenuCard({ page }: PageMenuProps) {
+function MenuCard({ page, states }: MenuCardsProps) {
   const [isExtended, setIsExtended] = useState<boolean>(false);
 
   const toggleExtension = () => {
+    !states.someCardOpenned
+      ? states.setVisibleMenus([page])
+      : states.setVisibleMenus(states.arrayOfMenus);
     setIsExtended(!isExtended);
+    states.setSomeCardOpenned(!states.someCardOpenned);
   };
 
   const uniqueCategoryItems: MenuItem[] = page.menu.reduce(
@@ -24,10 +28,10 @@ function MenuCard({ page }: PageMenuProps) {
     <motion.div
       transition={{ layout: { duration: 0.5 } }}
       layout
-      className={`menu-card${isExtended ? " extended" : ""}`}
+      className={`menu-card${states.someCardOpenned ? " extended" : ""}`}
       onClick={toggleExtension}
       whileHover={
-        !isExtended
+        !states.someCardOpenned
           ? {
               z: 8,
               transition: { duration: 0.3 },
@@ -37,7 +41,7 @@ function MenuCard({ page }: PageMenuProps) {
     >
       <img src={page.imgSrc} alt={page.category} />
       <figcaption>{page.category}</figcaption>
-      {isExtended && (
+      {states.someCardOpenned && (
         <motion.article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

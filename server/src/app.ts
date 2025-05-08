@@ -15,6 +15,7 @@ const menu = [
   {
     id: "e",
     category: "Entrées",
+    icon: "menu/icons/starter-icon.svg",
     imgSrc:
       "https://www.maisondelamouche.fr/wp-content/uploads/2024/08/1722758907_recette-de-ceviche-de-daurade-a-la-peruvienne.jpg",
     menu: [
@@ -71,6 +72,7 @@ const menu = [
   {
     id: "p",
     category: "Plats",
+    icon: "menu/icons/main-course-icon.svg",
     imgSrc:
       "https://cdn.pixabay.com/photo/2021/06/21/15/03/salmon-6353898_1280.jpg",
     menu: [
@@ -126,6 +128,7 @@ const menu = [
   {
     id: "d",
     category: "Desserts",
+    icon: "menu/icons/dessert-icon.svg",
     imgSrc:
       "https://images.pexels.com/photos/11701858/pexels-photo-11701858.jpeg",
     menu: [
@@ -164,6 +167,7 @@ const menu = [
   {
     id: "bc",
     category: "Boissons Chaudes",
+    icon: "menu/icons/coffee-icon.svg",
     imgSrc:
       "https://media.istockphoto.com/id/1126871442/fr/photo/tasse-à-café.jpg?s=612x612&w=0&k=20&c=8BcX-H-fLsItnVz89s0S-vneadu5jmn3fkVYM9BHa8c=",
     menu: [
@@ -254,8 +258,9 @@ const menu = [
     ],
   },
   {
-    id: "b",
-    category: "Boissons fraiches",
+    id: "bf",
+    category: "Boissons Fraiches",
+    icon: "menu/icons/glass-icon.svg",
     imgSrc:
       "https://images.pexels.com/photos/2531183/pexels-photo-2531183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     menu: [
