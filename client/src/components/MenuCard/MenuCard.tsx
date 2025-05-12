@@ -1,16 +1,22 @@
 import "./MenuCard.css";
 import { motion } from "motion/react";
-import { useState } from "react";
 import type { MenuCardsProps, MenuItem } from "../../pages/MenuPage/MenuTypes";
 
 function MenuCard({ page, states }: MenuCardsProps) {
-  const [isExtended, setIsExtended] = useState<boolean>(false);
-
   const toggleExtension = () => {
-    !states.someCardOpenned
-      ? states.setVisibleMenus([page])
-      : states.setVisibleMenus(states.arrayOfMenus);
-    setIsExtended(!isExtended);
+    if (!states.someCardOpenned) {
+      states.setVisibleMenus([page]);
+      window.scrollTo({
+        top: 90,
+        behavior: "smooth",
+      });
+    } else {
+      states.setVisibleMenus(states.arrayOfMenus);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
     states.setSomeCardOpenned(!states.someCardOpenned);
   };
 
