@@ -38,6 +38,7 @@ function Footer() {
           <p>
             Site développé par <a href=" ">WestDevs</a>
           </p>
+
           <p>
             <a href=" ">Mentions légales</a>
           </p>
