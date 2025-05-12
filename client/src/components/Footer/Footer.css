@@ -53,7 +53,7 @@ footer ul {
   }
 }
 
-footer .reseaux {
+footer .networks {
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -100,11 +100,11 @@ footer .reseaux {
     line-height: 1;
   }
 
-  footer .reseaux img {
+  footer .networks img {
     height: 35px;
     width: 35px;
   }
-  footer .reseaux {
+  footer .networks {
     height: inherit;
 
     section {
@@ -116,15 +116,3 @@ footer .reseaux {
     height: 120px;
   }
 }
-
-/* @media screen and (min-width: 846px) { */
-/* ul { */
-/* display: flex; */
-/* flex-direction: column; */
-/* min-height: 100vh; */
-/* } */
-/* } */
-
-/*#root { */
-/* 
-/* } */
