@@ -11,23 +11,23 @@ function Footer() {
           <p>Adresse : 52 Av. de la plage 85800 Saint-Gilles-Croix-de-vie</p>
         </li>
 
-        <li className="reseaux">
+        <li className="networks">
           <h3>Réseaux</h3>
           <section>
-            <a href=" ">
+            <a href="https://fr-fr.facebook.com/" target="blank">
               <img
-                src="logo-facebook.svg"
+                src="logo-facebook.png"
                 alt="Lien vers notre page Facebook"
               />
             </a>
-            <a href=" ">
+            <a href="https://www.instagram.com/" target="blank">
               <img
                 src="logo-instagram.svg"
                 alt="Lien vers notre page Instagram"
               />
             </a>
 
-            <a href=" ">
+            <a href="https://x.com/" target="blank">
               <img src="logo-X.png" alt="Lien vers notre page Twitter" />
             </a>
           </section>
