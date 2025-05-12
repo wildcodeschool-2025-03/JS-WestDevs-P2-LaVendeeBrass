@@ -8,7 +8,6 @@ function MenuSideBard({ arrayOfMenus, setVisibleMenus }: MenuSideBarProps) {
       className="menu-sidebar"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1.5 } }}
-      exit={{ scale: 0, y: -50 }}
     >
       {arrayOfMenus.map((page) => {
         return (

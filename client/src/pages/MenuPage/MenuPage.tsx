@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MenuCard from "../../components/MenuCard/MenuCard";
 import "./MenuPage.css";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import MenuSideBard from "../../components/MenuSideBar/MenuSideBar";
 import type { MenuData } from "./MenuTypes";
 
@@ -23,15 +23,13 @@ function MenuPage() {
     <main className="menu-page">
       <h1>LE MENU</h1>
       <div className="menu-container">
-        <AnimatePresence>
+        <motion.section className="menu-list">
           {someCardOpenned && (
             <MenuSideBard
               arrayOfMenus={arrayOfMenus}
               setVisibleMenus={setVisibleMenus}
             />
           )}
-        </AnimatePresence>
-        <motion.section className="menu-list">
           {visibleMenus.map((page) => {
             return (
               <MenuCard

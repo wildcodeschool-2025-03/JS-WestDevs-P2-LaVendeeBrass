@@ -24,10 +24,21 @@ function MenuCard({ page, states }: MenuCardsProps) {
     [],
   );
 
+  const CardsVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+    exit: { scale: 0, opacity: 0 },
+    layout: { transition: { duration: 0.5 } },
+  };
+
   return (
     <motion.div
+      variants={CardsVariants}
       transition={{ layout: { duration: 0.5 } }}
       layout
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       className={`menu-card${states.someCardOpenned ? " extended" : ""}`}
       onClick={toggleExtension}
       whileHover={
