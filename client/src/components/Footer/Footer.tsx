@@ -35,7 +35,9 @@ function Footer() {
 
         <li>
           <h3>Le Site</h3>
-          <p>Site développé par WestDevs</p>
+          <p>
+            Site développé par <a href=" ">WestDevs</a>
+          </p>
           <p>
             <a href=" ">Mentions légales</a>
           </p>
