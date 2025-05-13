@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.members {
+  padding-top: 100px;
+
+  section {
+    text-align: center;
+    background-color: gray;
+  }
+  article {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+  }
+}
