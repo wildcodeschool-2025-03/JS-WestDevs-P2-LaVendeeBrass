@@ -6,7 +6,7 @@ import MenuSideBard from "../../components/MenuSideBar/MenuSideBar";
 import type { MenuData } from "./MenuTypes";
 
 function MenuPage() {
-  const fixData = useRef([]);
+  const statedMenuData = useRef([]);
   const [someCardOpenned, setSomeCardOpenned] = useState(false);
   const [visibleMenus, setVisibleMenus] = useState<MenuData[]>([]);
 
@@ -15,8 +15,7 @@ function MenuPage() {
       .then((response) => response.json())
       .then((data) => {
         setVisibleMenus(data);
-        fixData.current = data;
-        console.log(fixData);
+        statedMenuData.current = data;
       });
   }, []);
 
@@ -27,7 +26,7 @@ function MenuPage() {
         <motion.section className="menu-list">
           {someCardOpenned && (
             <MenuSideBard
-              arrayOfMenus={fixData.current}
+              statedMenuData={statedMenuData.current}
               setVisibleMenus={setVisibleMenus}
             />
           )}
@@ -37,7 +36,7 @@ function MenuPage() {
                 key={page.id}
                 page={page}
                 states={{
-                  fixData,
+                  statedMenuData,
                   setVisibleMenus,
                   someCardOpenned,
                   setSomeCardOpenned,

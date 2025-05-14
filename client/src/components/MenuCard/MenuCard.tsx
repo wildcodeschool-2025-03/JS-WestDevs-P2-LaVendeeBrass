@@ -11,7 +11,7 @@ function MenuCard({ page, states }: MenuCardsProps) {
         behavior: "smooth",
       });
     } else {
-      states.setVisibleMenus(states.fixData.current);
+      states.setVisibleMenus(states.statedMenuData.current);
       window.scrollTo({
         top: 0,
         behavior: "smooth",
