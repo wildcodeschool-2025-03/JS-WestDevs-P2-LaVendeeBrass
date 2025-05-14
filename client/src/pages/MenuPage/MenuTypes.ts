@@ -16,7 +16,7 @@ export interface MenuCardsProps {
     menu: MenuItem[];
   };
   states: {
-    arrayOfMenus: MenuData[];
+    fixData: { current: MenuData[] };
     setVisibleMenus: (data: MenuData[]) => void;
     someCardOpenned: boolean;
     setSomeCardOpenned: (status: boolean) => void;

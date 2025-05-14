@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MenuCard from "../../components/MenuCard/MenuCard";
 import "./MenuPage.css";
 import { motion } from "motion/react";
@@ -6,7 +6,7 @@ import MenuSideBard from "../../components/MenuSideBar/MenuSideBar";
 import type { MenuData } from "./MenuTypes";
 
 function MenuPage() {
-  const [arrayOfMenus, setArrayOfMenus] = useState<MenuData[]>([]);
+  const fixData = useRef([]);
   const [someCardOpenned, setSomeCardOpenned] = useState(false);
   const [visibleMenus, setVisibleMenus] = useState<MenuData[]>([]);
 
@@ -15,7 +15,8 @@ function MenuPage() {
       .then((response) => response.json())
       .then((data) => {
         setVisibleMenus(data);
-        setArrayOfMenus(data);
+        fixData.current = data;
+        console.log(fixData);
       });
   }, []);
 
@@ -26,7 +27,7 @@ function MenuPage() {
         <motion.section className="menu-list">
           {someCardOpenned && (
             <MenuSideBard
-              arrayOfMenus={arrayOfMenus}
+              arrayOfMenus={fixData.current}
               setVisibleMenus={setVisibleMenus}
             />
           )}
@@ -36,7 +37,7 @@ function MenuPage() {
                 key={page.id}
                 page={page}
                 states={{
-                  arrayOfMenus,
+                  fixData,
                   setVisibleMenus,
                   someCardOpenned,
                   setSomeCardOpenned,
