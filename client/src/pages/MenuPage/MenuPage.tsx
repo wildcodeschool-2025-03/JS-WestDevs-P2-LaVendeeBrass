@@ -6,15 +6,14 @@ import MenuSideBard from "../../components/MenuSideBar/MenuSideBar";
 import type { MenuData } from "./MenuTypes";
 
 function MenuPage() {
+  const [visibleCardCategory, setVisibleCardCategory] = useState("");
   const [arrayOfMenus, setArrayOfMenus] = useState<MenuData[]>([]);
   const [someCardOpenned, setSomeCardOpenned] = useState(false);
-  const [visibleMenus, setVisibleMenus] = useState<MenuData[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:3310/menu")
       .then((response) => response.json())
       .then((data) => {
-        setVisibleMenus(data);
         setArrayOfMenus(data);
       });
   }, []);
@@ -27,23 +26,24 @@ function MenuPage() {
           {someCardOpenned && (
             <MenuSideBard
               arrayOfMenus={arrayOfMenus}
-              setVisibleMenus={setVisibleMenus}
+              setVisibleCardCategory={setVisibleCardCategory}
             />
           )}
-          {visibleMenus.map((page) => {
-            return (
-              <MenuCard
-                key={page.id}
-                page={page}
-                states={{
-                  arrayOfMenus,
-                  setVisibleMenus,
-                  someCardOpenned,
-                  setSomeCardOpenned,
-                }}
-              />
-            );
-          })}
+          {arrayOfMenus
+            .filter((page) => page.category.includes(visibleCardCategory))
+            .map((page) => {
+              return (
+                <MenuCard
+                  key={page.id}
+                  page={page}
+                  states={{
+                    setVisibleCardCategory,
+                    someCardOpenned,
+                    setSomeCardOpenned,
+                  }}
+                />
+              );
+            })}
         </motion.section>
       </div>
     </main>

@@ -5,13 +5,13 @@ import type { MenuCardsProps, MenuItem } from "../../pages/MenuPage/MenuTypes";
 function MenuCard({ page, states }: MenuCardsProps) {
   const toggleExtension = () => {
     if (!states.someCardOpenned) {
-      states.setVisibleMenus([page]);
+      states.setVisibleCardCategory(page.category);
       window.scrollTo({
         top: 90,
         behavior: "smooth",
       });
     } else {
-      states.setVisibleMenus(states.arrayOfMenus);
+      states.setVisibleCardCategory("");
       window.scrollTo({
         top: 0,
         behavior: "smooth",

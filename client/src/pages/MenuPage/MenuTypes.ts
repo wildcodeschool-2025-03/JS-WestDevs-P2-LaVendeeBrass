@@ -16,8 +16,7 @@ export interface MenuCardsProps {
     menu: MenuItem[];
   };
   states: {
-    arrayOfMenus: MenuData[];
-    setVisibleMenus: (data: MenuData[]) => void;
+    setVisibleCardCategory: (data: string) => void;
     someCardOpenned: boolean;
     setSomeCardOpenned: (status: boolean) => void;
   };
@@ -33,5 +32,5 @@ export interface MenuData {
 
 export interface MenuSideBarProps {
   arrayOfMenus: MenuData[];
-  setVisibleMenus: (data: MenuData[]) => void;
+  setVisibleCardCategory: (data: string) => void;
 }

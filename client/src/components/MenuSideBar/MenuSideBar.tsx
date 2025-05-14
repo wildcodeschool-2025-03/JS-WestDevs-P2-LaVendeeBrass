@@ -2,7 +2,10 @@ import "./MenuSideBard.css";
 import { motion } from "motion/react";
 import type { MenuSideBarProps } from "../../pages/MenuPage/MenuTypes";
 
-function MenuSideBard({ arrayOfMenus, setVisibleMenus }: MenuSideBarProps) {
+function MenuSideBard({
+  arrayOfMenus,
+  setVisibleCardCategory,
+}: MenuSideBarProps) {
   return (
     <motion.ul
       className="menu-sidebar"
@@ -12,7 +15,10 @@ function MenuSideBard({ arrayOfMenus, setVisibleMenus }: MenuSideBarProps) {
       {arrayOfMenus.map((page) => {
         return (
           <li key={page.id}>
-            <button type="button" onClick={() => setVisibleMenus([page])}>
+            <button
+              type="button"
+              onClick={() => setVisibleCardCategory(page.category)}
+            >
               <img src={page.icon} alt={page.category} />
               <span>{page.category}</span>
             </button>
