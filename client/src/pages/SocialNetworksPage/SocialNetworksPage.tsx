@@ -5,18 +5,23 @@ function SocialNetworksPage() {
     <>
       <main className="members">
         <section>
-          <h3>Rémy Parmentier</h3>
+          <h3>Rémy PARMENTIER</h3>
           <article>
-            <img src="icons8-github-30.png" alt="" />
-            <a href="https://github.com/Remy-PARMENTIER-LEMIERE" target="blank">
+            <img src="icons8-github-30.png" alt="Logo Guithub" />
+            <a
+              href="https://github.com/Remy-PARMENTIER-LEMIERE"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               Github
             </a>
           </article>
           <article>
-            <img src="icons8-linkedin-30.png" alt="" />
+            <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
             <a
               href="https://www.linkedin.com/in/rémy-parmentier-397604147/"
               target="blank"
+              rel="noopener noreferrer"
             >
               LinkeDIn
             </a>
@@ -24,35 +29,23 @@ function SocialNetworksPage() {
         </section>
 
         <section>
-          <h3>Marie Eulalie Coly</h3>
+          <h3>Marie Eulalie COLY</h3>
           <article>
-            <img src="icons8-github-30.png" alt="" />
-            <a href="htth3s://github.com/Eula-Coly" target="blank">
-              Github
-            </a>
-          </article>
-          <article>
-            <img src="icons8-linkedin-30.png" alt="" />
-            <a href="www.linkedin.com/in/marie-eulalie-bertin" target="blank">
-              LInkedIn
-            </a>
-          </article>
-        </section>
-
-        <section>
-          <h3>Tristan Zubiarrain</h3>
-          <article>
-            <img src="icons8-github-30.png" alt="" />
-            <a href="https://github.com/Tristanzubi" target="blank">
-              Github
-            </a>
-          </article>
-
-          <article>
-            <img src="icons8-linkedin-30.png" alt="" />
+            <img src="icons8-github-30.png" alt="Logo Guithub" />
             <a
-              href="https://www.linkedin.com/in/tristan-zubiarrain-825a37325/"
+              href="https://github.com/Eula-Coly"
               target="blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </article>
+          <article>
+            <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
+            <a
+              href="https://www.linkedin.com/in/marie-eulalie-bertin"
+              target="blank"
+              rel="noopener noreferrer"
             >
               LInkedIn
             </a>
@@ -60,17 +53,50 @@ function SocialNetworksPage() {
         </section>
 
         <section>
-          <h3>Corentin Thébaud</h3>
+          <h3>Tristan ZUBIARRAIN</h3>
           <article>
-            <img src="icons8-github-30.png" alt="" />
-            <a href="https://github.com/corentinthebaud" target="blank">
+            <img src="icons8-github-30.png" alt="Logo Guithub" />
+            <a
+              href="https://github.com/Tristanzubi"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               Github
             </a>
           </article>
 
           <article>
-            <img src="icons8-linkedin-30.png" alt="" />
-            <a href="https://www.linkedin.com/in/corentin-thebaud-545b83171/">
+            <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
+            <a
+              href="https://www.linkedin.com/in/tristan-zubiarrain-825a37325/"
+              target="blank"
+              rel="noopener noreferrer"
+            >
+              LInkedIn
+            </a>
+          </article>
+        </section>
+
+        <section>
+          <h3>Corentin THEBAUD</h3>
+          <article>
+            <img src="icons8-github-30.png" alt="Logo Guithub" />
+            <a
+              href="https://github.com/corentinthebaud"
+              target="blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </article>
+
+          <article>
+            <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
+            <a
+              href="https://www.linkedin.com/in/corentin-thebaud-545b83171/"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               LInkedIn
             </a>
           </article>
