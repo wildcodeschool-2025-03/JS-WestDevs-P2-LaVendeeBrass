@@ -449,7 +449,7 @@ const arrayOfServices = [
       },
       {
         id: "f2",
-        name: "Tristant",
+        name: "Tristan",
         imgAvatar:
           "https://www.svgrepo.com/show/140760/man-with-short-hair-profile-avatar.svg",
       },

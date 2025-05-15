@@ -8,7 +8,7 @@ function ServiceCard({ imgCategory, category, members }: ServiceProps) {
 
   return (
     <section className="service-card">
-      <div className=".service-category">
+      <div className="service-category">
         <motion.button
           whileHover={{
             scale: 1.1,
