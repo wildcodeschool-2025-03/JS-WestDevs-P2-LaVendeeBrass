@@ -6,31 +6,43 @@ body {
   margin: 0;
 }
 
-.members {
+.socialnetworkspage {
   background-color: #18242b;
   background-image: url("aboutbackground/curve-line-top.svg"),
     url("aboutbackground/curve-line-bottom.svg");
-  padding-top: 80px;
+  background-size: 100% auto, 100% auto;
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  padding-top: 72px;
+}
+
+.members {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 32px;
+  padding: 32px;
 
-  section {
+  .member-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 300px;
     text-align: center;
     background-color: gray;
-    margin: 32px;
     padding: 24px;
     opacity: 80%;
   }
 
   h3 {
-    margin-top: auto;
+    margin: 0;
     color: white;
+    font-family: "MarcellusSC", sans-serif;
   }
 
   article {
+    font-family: "Marcellus", sans-serif;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -43,13 +55,60 @@ body {
     text-decoration: none;
     color: white;
   }
+
+  a:hover {
+    color: rgb(29, 28, 28);
+  }
 }
 
-@media screen and (min-width: 850px) {
+/* @media screen and (min-width: 850px) { 
   .members {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px; 
+    min-height: calc(100vh - 120px);
+
+    .member-card {
+      width: 40vh;
+      
+      h3 {
+        font-size: 1.7rem;
+      }
+      a {
+        font-size: 1.5rem;
+      }
+      img {
+        width: 5vh;
+        height: 5vh;
+      }
+    }
+  }
+} */
+
+@media screen and (min-width: 950px) {
+  .members {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 32px;
+    min-height: calc(100vh - 120px);
+
+    .member-card {
+      width: 80%;
+      height: 35vh;
+      h3 {
+        font-size: 2.3rem;
+      }
+      a {
+        font-size: 2rem;
+      }
+      img {
+        width: 7vh;
+        height: 7vh;
+      }
+    }
   }
 }
