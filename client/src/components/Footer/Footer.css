@@ -44,11 +44,12 @@ footer ul {
 
     a {
       color: white;
-      text-decoration: none;
+      font-size: 1rem;
+    }
 
-      a :hover {
-        text-decoration-color: rgb(97, 97, 235);
-      }
+    a:hover {
+      color: rgb(13, 13, 123);
+      /* transform: translateY(-5px); */
     }
   }
 }

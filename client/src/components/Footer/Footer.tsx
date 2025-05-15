@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import "./Footer.css";
+import { hover } from "motion";
 
 function Footer() {
   return (
@@ -40,12 +41,8 @@ function Footer() {
             Site développé par <Link to="/SocialNetworksPage">WestDevs</Link>
           </p>
 
-          <p>
-            <a href=" ">Mentions légales</a>
-          </p>
-          <p>
-            <a href=" ">Données personnelles</a>
-          </p>
+          <p>Mentions légales</p>
+          <p>Données personnelles</p>
         </li>
       </ul>
     </footer>

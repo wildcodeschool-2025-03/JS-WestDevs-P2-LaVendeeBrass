@@ -11,7 +11,7 @@ function SocialNetworksPage() {
               <img src="icons8-github-30.png" alt="Logo Guithub" />
               <a
                 href="https://github.com/Remy-PARMENTIER-LEMIERE"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
@@ -21,7 +21,7 @@ function SocialNetworksPage() {
               <img src="icons8-linkedin-30.png" alt="Logo LinkedIn" />
               <a
                 href="https://www.linkedin.com/in/rémy-parmentier-397604147/"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 LinkedIn
@@ -35,7 +35,7 @@ function SocialNetworksPage() {
               <img src="icons8-github-30.png" alt="Logo Guithub" />
               <a
                 href="https://github.com/Eula-Coly"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
@@ -45,10 +45,10 @@ function SocialNetworksPage() {
               <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
               <a
                 href="https://www.linkedin.com/in/marie-eulalie-bertin"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                LInkedIn
+                LinkedIn
               </a>
             </article>
           </section>
@@ -59,7 +59,7 @@ function SocialNetworksPage() {
               <img src="icons8-github-30.png" alt="Logo Guithub" />
               <a
                 href="https://github.com/Tristanzubi"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
@@ -70,10 +70,10 @@ function SocialNetworksPage() {
               <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
               <a
                 href="https://www.linkedin.com/in/tristan-zubiarrain-825a37325/"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                LInkedIn
+                LinkedIn
               </a>
             </article>
           </section>
@@ -84,7 +84,7 @@ function SocialNetworksPage() {
               <img src="icons8-github-30.png" alt="Logo Guithub" />
               <a
                 href="https://github.com/corentinthebaud"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
@@ -95,10 +95,10 @@ function SocialNetworksPage() {
               <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
               <a
                 href="https://www.linkedin.com/in/corentin-thebaud-545b83171/"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                LInkedIn
+                LinkedIn
               </a>
             </article>
           </section>
