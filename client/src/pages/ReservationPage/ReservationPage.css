@@ -90,7 +90,7 @@
 
 @media screen and (min-width: 900px) {
   .reservation-main {
-    min-height: calc(100vh - 134.34px);
+    min-height: calc(100vh - 120px);
   }
   .reservation-main .reservation-card {
     height: 75vh;

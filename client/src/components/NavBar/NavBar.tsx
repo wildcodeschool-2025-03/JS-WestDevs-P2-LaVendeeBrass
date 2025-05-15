@@ -10,6 +10,13 @@ function NavBar() {
     setShowLinks(!showLinks);
   };
 
+  const handleCloseMenu = () => {
+    setShowLinks(false);
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   // location navbar
   const location = useLocation();
 
@@ -37,16 +44,24 @@ function NavBar() {
       <nav>
         <ul>
           <li>
-            <Link to="/">accueil</Link>
+            <Link to="/" onClick={handleCloseMenu}>
+              accueil
+            </Link>
           </li>
           <li>
-            <Link to="/MenuPage">menu</Link>
+            <Link to="/MenuPage" onClick={handleCloseMenu}>
+              menu
+            </Link>
           </li>
           <li>
-            <Link to="/AboutPage">à propos</Link>
+            <Link to="/AboutPage" onClick={handleCloseMenu}>
+              à propos
+            </Link>
           </li>
           <li>
-            <Link to="/ReservationPage">réservation</Link>
+            <Link to="/ReservationPage" onClick={handleCloseMenu}>
+              réservation
+            </Link>
           </li>
         </ul>
       </nav>
