@@ -28,7 +28,9 @@ function NavBar() {
     <section
       className={`${NavBarClass} ${showLinks ? "show-nav" : "hide-nav"}`}
     >
-      <img src="logo.png" alt="Logo de la brasserie" />
+      <Link to="/">
+        <img src="logo.png" alt="Logo de la brasserie" />
+      </Link>
       <button type="button" className="burger-menu" onClick={handleShowLinks}>
         <span />
       </button>
