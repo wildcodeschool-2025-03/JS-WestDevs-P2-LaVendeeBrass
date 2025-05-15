@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import "./Footer.css";
-import { hover } from "motion";
 
 function Footer() {
   return (
