@@ -13,6 +13,7 @@
   text-align: center;
   padding: 32px;
   color: white;
+  font-family: "Marcellus", sans-serif;
 }
 
 .about-main .about-history {
@@ -22,6 +23,7 @@
 .about-main .about-history h2 {
   margin: 48px;
   padding: 16px;
+  font-family: "MarcellusSC", sans-serif;
 }
 
 .about-main .about-history p {
@@ -29,6 +31,7 @@
 }
 
 .about-main .about-history h1 {
+  font-family: "MarcellusSC", sans-serif;
   margin-top: 3rem;
 }
 
