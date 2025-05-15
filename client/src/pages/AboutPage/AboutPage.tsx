@@ -20,13 +20,14 @@ function AboutPage() {
             L'Histoire du Vendée Brass :{" "}
             <span>un Goût de Loire-Atlantique</span>
           </h2>
+          <h3>L'Éclosion d'une Passion :</h3>
           <p>
-            L'Éclosion d'une Passion : <br /> L'aventure du "Vendée Brass" a
-            germé d'une idée simple mais audacieuse : célébrer la richesse du
-            terroir de la Vendée, cette partie si attachante de la
-            Loire-Atlantique, à travers une cuisine authentique et conviviale.
+            L'aventure du "Vendée Brass" a germé d'une idée simple mais
+            audacieuse : célébrer la richesse du terroir de la Vendée, cette
+            partie si attachante de la Loire-Atlantique, à travers une cuisine
+            authentique et conviviale.
           </p>
-          <h1>L'équipe à votre service cliquez pour en savoir plus</h1>
+          <h1>L'équipe à votre service</h1>
         </div>
         <div className="services-container">
           {arrayOfServices.map((service) => {
