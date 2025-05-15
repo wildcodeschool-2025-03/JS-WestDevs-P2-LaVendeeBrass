@@ -11,7 +11,7 @@ function ServiceCard({ imgCategory, category, members }: ServiceProps) {
       <div className="service-category">
         <motion.button
           whileHover={{
-            scale: 1.1,
+            scale: 1.05,
             textShadow: "0px 0px 8px rgb(255,255,255)",
             boxShadow: "0px 0px 8px rgb(255,255,255)",
           }}
@@ -25,6 +25,7 @@ function ServiceCard({ imgCategory, category, members }: ServiceProps) {
             alt="avatar catégorie"
           />
           <h2>{category}</h2>
+          <p>Détails ⇓</p>
         </motion.button>
       </div>
 
