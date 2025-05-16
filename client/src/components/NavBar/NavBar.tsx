@@ -10,6 +10,13 @@ function NavBar() {
     setShowLinks(!showLinks);
   };
 
+  const handleCloseMenu = () => {
+    setShowLinks(false);
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   // location navbar
   const location = useLocation();
 
@@ -28,23 +35,33 @@ function NavBar() {
     <section
       className={`${NavBarClass} ${showLinks ? "show-nav" : "hide-nav"}`}
     >
-      <img src="logo.png" alt="Logo de la brasserie" />
+      <Link to="/">
+        <img src="logo.png" alt="Logo de la brasserie" />
+      </Link>
       <button type="button" className="burger-menu" onClick={handleShowLinks}>
         <span />
       </button>
       <nav>
         <ul>
           <li>
-            <Link to="/">accueil</Link>
+            <Link to="/" onClick={handleCloseMenu}>
+              accueil
+            </Link>
           </li>
           <li>
-            <Link to="/MenuPage">menu</Link>
+            <Link to="/MenuPage" onClick={handleCloseMenu}>
+              menu
+            </Link>
           </li>
           <li>
-            <Link to="/AboutPage">à propos</Link>
+            <Link to="/AboutPage" onClick={handleCloseMenu}>
+              à propos
+            </Link>
           </li>
           <li>
-            <Link to="/ReservationPage">réservation</Link>
+            <Link to="/ReservationPage" onClick={handleCloseMenu}>
+              réservation
+            </Link>
           </li>
         </ul>
       </nav>
