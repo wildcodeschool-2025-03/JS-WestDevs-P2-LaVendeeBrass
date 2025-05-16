@@ -104,6 +104,7 @@ function ReservationPage() {
                 onChange={handleDateChange}
                 min={formatDate(today, 0)}
                 max={formatDate(today, 21)}
+                required
               />
             </div>
             <div className="input-group">
@@ -113,8 +114,9 @@ function ReservationPage() {
                 id="service"
                 onChange={handleServiceChange}
                 value={service}
+                required
               >
-                <option>--Choisir votre Service</option>
+                <option>Choisir votre Service</option>
                 <option>Service du Midi</option>
                 <option>Service du Soir</option>
               </select>
@@ -133,12 +135,18 @@ function ReservationPage() {
                 onChange={handleNumberChange}
                 min={minNumber}
                 max={maxNumber}
+                required
               />
             </div>
 
             <div className="input-group">
               <label htmlFor="nom">Nom</label>
-              <input id="nom" type="text" placeholder=" Saisissez vote nom" />
+              <input
+                id="nom"
+                type="text"
+                placeholder=" Saisissez vote nom"
+                required
+              />
             </div>
             <div className="input-group">
               <label htmlFor="prenom">Prénom</label>
@@ -146,6 +154,7 @@ function ReservationPage() {
                 id="prenom"
                 type="text"
                 placeholder=" Saisissez votre prénom"
+                required
               />
             </div>
             <div className="input-group">
@@ -154,11 +163,18 @@ function ReservationPage() {
                 id="mail"
                 type="email"
                 placeholder=" Saisissez votre mail"
+                required
               />
             </div>
             <div className="input-group">
               <label htmlFor="telephone">Numéro de téléphone</label>
-              <input id="telephone" type="tel" placeholder=" N° de téléphone" />
+              <input
+                id="telephone"
+                type="tel"
+                name="phone"
+                placeholder=" N° de téléphone"
+                required
+              />
             </div>
           </div>
 

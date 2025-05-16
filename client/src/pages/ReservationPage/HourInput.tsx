@@ -7,6 +7,7 @@ const HourInput: React.FC<HourInputProps> = ({ service }) => {
 
   if (service === "Service du Midi") {
     hourOptions = [
+      { value: "", label: "Choisissez l'heure" },
       { value: "12:00", label: "12h00" },
       { value: "12:15", label: "12h15" },
       { value: "12:30", label: "12h30" },
@@ -17,6 +18,7 @@ const HourInput: React.FC<HourInputProps> = ({ service }) => {
     ];
   } else if (service === "Service du Soir") {
     hourOptions = [
+      { value: "", label: "Choisissez l'heure" },
       { value: "19:00", label: "19h00" },
       { value: "19:15", label: "19h15" },
       { value: "19:30", label: "19h30" },
@@ -28,12 +30,11 @@ const HourInput: React.FC<HourInputProps> = ({ service }) => {
       { value: "21:00", label: "21h00" },
     ];
   } else {
-    hourOptions = [{ value: "", label: "Choisissez un service" }];
+    hourOptions = [{ value: "", label: "Choisir d'abord un service" }];
   }
 
   return (
     <select name="Heure" id="heure">
-      <option value="">Choisissez l'heure</option>
       {hourOptions.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}

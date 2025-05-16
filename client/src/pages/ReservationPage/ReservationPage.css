@@ -69,17 +69,20 @@
   padding: 4px 8px;
   border-radius: 16px;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .reservation-main .formulaire button {
-  width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
   background-color: #c8a476;
   font-family: "MarcellusSC", serif;
+  font-size: 1.2rem;
   color: white;
   border-radius: 16px;
   border: transparent;
   margin: 16px;
-  padding: 16px;
+  padding: 12px 32px;
 }
 
 @media screen and (max-width: 900px) {
