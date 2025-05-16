@@ -3,8 +3,8 @@ import "./SocialNetworksPage.css";
 function SocialNetworksPage() {
   return (
     <>
-      <main className="socialnetworkspage">
-        <section className="members">
+      <main className="social-networks-page">
+        <section className="team-members">
           <section className="member-card">
             <h3>Rémy PARMENTIER</h3>
             <article>

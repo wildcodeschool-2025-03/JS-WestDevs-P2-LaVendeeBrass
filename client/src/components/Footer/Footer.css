@@ -45,6 +45,7 @@ footer ul {
     a {
       color: white;
       font-size: 1rem;
+      text-decoration: underline;
     }
 
     a:hover {
