@@ -259,7 +259,7 @@ const menu = [
   },
   {
     id: "bf",
-    category: "Boissons Fraiches",
+    category: "Boissons Fraîches",
     icon: "menu/icons/glass-icon.svg",
     imgSrc:
       "https://images.pexels.com/photos/2531183/pexels-photo-2531183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
