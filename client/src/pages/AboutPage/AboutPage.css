@@ -24,7 +24,8 @@
 
 .about-main .about-history h2 {
   margin-top: 0;
-  font-size: 2rem;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
   font-family: "MarcellusSC", sans-serif;
 
   span {
@@ -35,7 +36,7 @@
 .about-main .about-history h3 {
   letter-spacing: 1px;
   font-size: 1.5rem;
-  margin: 0;
+  margin-bottom: 30px;
 }
 
 .about-main .about-history p {
@@ -59,5 +60,9 @@
 @media screen and (min-width: 800px) {
   .about-main {
     min-height: calc(100vh - 134.34px);
+
+    .about-history h2 {
+      font-size: 2rem;
+    }
   }
 }
