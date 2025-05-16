@@ -18,7 +18,7 @@ function AboutPage() {
         <div className="about-history">
           <h2>
             L'Histoire du Vendée Brass :{" "}
-            <span>un Goût de Loire-Atlantique</span>
+            <span>un Goût de Pays de la Loire</span>
           </h2>
           <h3>L'Éclosion d'une Passion :</h3>
           <p>
