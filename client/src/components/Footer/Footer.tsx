@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "./Footer.css";
 
 function Footer() {
@@ -35,13 +36,12 @@ function Footer() {
 
         <li>
           <h3>Le Site</h3>
-          <p>Site développé par WestDevs</p>
           <p>
-            <a href=" ">Mentions légales</a>
+            Site développé par <Link to="/SocialNetworksPage">WestDevs</Link>
           </p>
-          <p>
-            <a href=" ">Données personnelles</a>
-          </p>
+
+          <p>Mentions légales</p>
+          <p>Données personnelles</p>
         </li>
       </ul>
     </footer>

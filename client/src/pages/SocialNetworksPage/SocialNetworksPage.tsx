@@ -1,0 +1,110 @@
+import "./SocialNetworksPage.css";
+
+function SocialNetworksPage() {
+  return (
+    <>
+      <main className="social-networks-page">
+        <section className="team-members">
+          <section className="member-card">
+            <h3>Rémy PARMENTIER</h3>
+            <article>
+              <img src="icons8-github-30.png" alt="Logo Guithub" />
+              <a
+                href="https://github.com/Remy-PARMENTIER-LEMIERE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </article>
+            <article>
+              <img src="icons8-linkedin-30.png" alt="Logo LinkedIn" />
+              <a
+                href="https://www.linkedin.com/in/rémy-parmentier-397604147/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </article>
+          </section>
+
+          <section className="member-card">
+            <h3>Marie Eulalie COLY</h3>
+            <article>
+              <img src="icons8-github-30.png" alt="Logo Guithub" />
+              <a
+                href="https://github.com/Eula-Coly"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </article>
+            <article>
+              <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
+              <a
+                href="https://www.linkedin.com/in/marie-eulalie-bertin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </article>
+          </section>
+
+          <section className="member-card">
+            <h3>Tristan ZUBIARRAIN</h3>
+            <article>
+              <img src="icons8-github-30.png" alt="Logo Guithub" />
+              <a
+                href="https://github.com/Tristanzubi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </article>
+
+            <article>
+              <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
+              <a
+                href="https://www.linkedin.com/in/tristan-zubiarrain-825a37325/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </article>
+          </section>
+
+          <section className="member-card">
+            <h3>Corentin THEBAUD</h3>
+            <article>
+              <img src="icons8-github-30.png" alt="Logo Guithub" />
+              <a
+                href="https://github.com/corentinthebaud"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </article>
+
+            <article>
+              <img src="icons8-linkedin-30.png" alt="Logo LinkeDIn" />
+              <a
+                href="https://www.linkedin.com/in/corentin-thebaud-545b83171/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </article>
+          </section>
+        </section>
+      </main>
+    </>
+  );
+}
+export default SocialNetworksPage;
